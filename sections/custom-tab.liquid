@@ -1,0 +1,362 @@
+<style>
+    .nz-tab-dest .tab-dest {
+      overflow: hidden;
+      display: flex;
+      row-gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nz-tab-dest .tab-dest button {
+      background-color: inherit;
+      cursor: pointer;
+      padding: 17px 35px;
+      transition: 0.3s;
+      font-size: 16px;
+      border: 1px solid #E5E5E5;
+      font-weight: 500;
+      min-width: 135px;
+    }
+    .nz-tab-dest .tabcontent img {
+      max-height: 50rem;
+  }
+    .nz-tab-dest .tab-dest button.active, .nz-tab-dest .tab-dest button:hover {
+      background-color: #E9F2F9;
+      border-bottom-color: #E9F2F9;
+    }
+    .nz-tab-dest .tabcontent {
+      display: none;
+      padding: 3.5rem;
+      background-color: #E9F2F9;
+      border-top: none;
+    }
+  .nz-tab-dest button.tablinks {
+      margin-right: 15px;
+  }
+  .nz-tab-dest .tabcontent * {
+    font-size: 15px;
+    color: #000;
+  }
+  .nz-tab-dest .tabcontent h3 {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+  }
+  .nz-tab-dest.page-width{
+    margin-top:70px;
+    padding: 0 6rem;
+  }
+
+  .nz-tab-mob .custom-accordion {
+    background-color: #E9F2F9;
+      color: #000;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 15px;
+      transition: 0.4s;
+      margin-bottom: 1rem;
+      position: relative;
+  }
+
+  .nz-tab-mob .custom-accordion:after {
+    position: absolute;
+    content: '+';
+    color: #000;
+    font-size: 20px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nz-tab-mob .custom-accordion.activeee:after {
+    content: "-";
+    font-size: 25px;
+  }
+
+  .nz-tab-mob .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .nz-tab-mob{
+    display: none;
+  }
+  .nz-tab-mob.page-width h4 {
+    font-weight: bold;
+  }
+
+  @media(max-width: 1000px){
+    .nz-tab-mob{
+      display: block;
+    }
+    .nz-tab-dest.page-width{
+      display: none;
+    }
+  }
+</style>
+
+<div class="nz-tab-dest page-width">
+  <div class="tab-dest">
+    {% for block in section.blocks %}
+      <button
+        class="tablinks{% if forloop.first %} active{% endif %}"
+        onclick="openTab(event, 'tab{{ forloop.index }}')"
+      >
+        {{ block.settings.text }}
+      </button>
+    {% endfor %}
+  </div>
+
+  {% for block in section.blocks %}
+    <div id="tab{{ forloop.index }}" class="tabcontent">
+      {% if block.settings.description %}
+        {{ product.description }}
+
+      {% elsif block.settings.shipping %}
+        {% if product.tags contains 'DZ' %}
+          {{ section.settings.tab_dz }}
+        {% elsif product.tags contains 'Bulky' %}
+          {{ section.settings.tab_bulky }}
+        {% elsif product.tags contains 'free_ship_metro' %}
+          {{ section.settings.tab_free_bulky }}
+        {% elsif product.tags contains 'GW' %}
+          {{ section.settings.tab_wa }}
+        {% endif %}
+
+      {% elsif block.settings.showroom %}
+        {% if product.tags contains 'showroom_cafe' %}
+          {{ section.settings.cafe }}
+        {% elsif product.tags contains 'showroom_abide' %}
+          {{ section.settings.abide }}
+        {% elsif product.tags contains 'showroom_vetro' %}
+          {{ section.settings.vetro }}
+        {% elsif product.tags contains 'showroom_ogetti' %}
+          {{ section.settings.ogetti }}
+        {% elsif product.tags contains 'showroom_furnlink' %}
+          {{ section.settings.furnlink }}
+        {% elsif product.tags contains 'showroom_casabona' %}
+          {{ section.settings.casabona }}
+        {% elsif product.tags contains 'showroom_vivin' %}
+          {{ section.settings.vivin }}
+        {% endif %}
+
+      {% else %}
+        {{ block.settings.tab_content }}
+      {% endif %}
+      {% if block.settings.image != blank %}
+        <img src="{{ block.settings.image | img_url: 'master' }}" loading="lazy" alt="size">
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<div class="nz-tab-mob page-width">
+  {% for block in section.blocks %}
+    <button class="custom-accordion">{{ block.settings.text }}</button>
+    <div class="panel">
+      {% if block.settings.description %}
+        {{ product.description }}
+
+      {% elsif block.settings.shipping %}
+        {% if product.tags contains 'DZ' %}
+          {{ section.settings.tab_dz }}
+        {% elsif product.tags contains 'Bulky' %}
+          {{ section.settings.tab_bulky }}
+        {% elsif product.tags contains 'free_ship_metro' %}
+          {{ section.settings.tab_free_bulky }}
+        {% elsif product.tags contains 'GW' %}
+          {{ section.settings.tab_wa }}
+        {% endif %}
+      
+      {% elsif block.settings.showroom %}
+        {% if product.tags contains 'showroom_cafe' %}
+          {{ section.settings.cafe }}
+        {% elsif product.tags contains 'showroom_abide' %}
+          {{ section.settings.abide }}
+        {% elsif product.tags contains 'showroom_vetro' %}
+          {{ section.settings.vetro }}
+        {% elsif product.tags contains 'showroom_ogetti' %}
+          {{ section.settings.ogetti }}
+        {% elsif product.tags contains 'showroom_furnlink' %}
+          {{ section.settings.furnlink }}
+        {% elsif product.tags contains 'showroom_casabona' %}
+          {{ section.settings.casabona }}
+        {% elsif product.tags contains 'showroom_vivin' %}
+          {{ section.settings.vivin }}
+        {% endif %}
+      
+      {% else %}
+        {{ block.settings.tab_content }}
+      {% endif %}
+      {% if block.settings.image != blank %}
+        <img src="{{ block.settings.image | img_url: 'master' }}" loading="lazy" alt="size">
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  {% comment %} For vertical tabs {% endcomment %}
+  var acc = document.getElementsByClassName("custom-accordion");
+  var i;
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("activeee");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  {% comment %} For horizontal tabs {% endcomment %}
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+  }
+
+  // Get the element with class "tablinks" and click on the first one
+  document.querySelector(".tablinks").click();
+</script>
+
+{% schema %}
+{
+  "name": "Product Tabs",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Shipping Description"
+    },
+    {
+      "type": "html",
+      "label": "Shipping For DZ",
+      "id": "tab_dz"
+    },
+    {
+      "type": "html",
+      "label": "Shipping For Bulky",
+      "id": "tab_bulky"
+    },
+    {
+      "type": "html",
+      "label": "Free Shipping Bulk",
+      "id": "tab_free_bulky"
+    },
+    {
+      "type": "html",
+      "label": "Shipping To WA Only",
+      "id": "tab_wa"
+    },
+    {
+      "type": "header",
+      "content": "Showroom Description"
+    },
+    {
+      "type": "richtext",
+      "label": "Content for Cafe Lighting showroom",
+      "id": "cafe",
+      "default": "<p>Content for Cafe Lighting showroom</p>"
+    },
+    {
+      "type": "richtext",
+      "label": "Content for Abide Furniture showroom",
+      "id": "abide",
+      "default": "<p>Content for Abide Furniture showroom</p>"
+    },
+    {
+      "type": "richtext",
+      "label": "Content for Vetro Furniture showroom",
+      "id": "vetro",
+      "default": "<p>Content for Vetro Furniture showroom</p>"
+    },
+    {
+      "type": "richtext",
+      "label": "Content for Ogetti Furniture Showroom",
+      "id": "ogetti",
+      "default": "<p>Content for Ogetti Furniture Showroom</p>"
+    },
+    {
+      "type": "richtext",
+      "label": "Content for Furnlink Furniture Showroom",
+      "id": "furnlink",
+      "default": "<p>Content for Furnlink Furniture Showroom</p>"
+    },
+    {
+      "type": "richtext",
+      "label": "Content for Casabona Showroom",
+      "id": "casabona",
+      "default": "<p>Content for Casabona Showroom</p>"
+    },
+    {
+      "type": "richtext",
+      "label": "Content for Vivin Furniture Showroom",
+      "id": "vivin",
+      "default": "<p>Content for Vivin Furniture Showroom</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Tab Title",
+          "id": "text",
+          "default": "Tab Title"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable product description?",
+          "id": "description"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable shipping tab?",
+          "id": "shipping",
+          "info": "Add data in Shipping description settings"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable showroom tab?",
+          "id": "showroom",
+          "info": "Add data in Showroom description settings"
+        },
+        {
+          "type": "richtext",
+          "label": "Tab Content",
+          "id": "tab_content",
+          "default": "<p>Tab Content</p>"
+        },
+
+        {
+          "type": "image_picker",
+          "label": "Add image",
+          "id": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Tabs",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

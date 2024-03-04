@@ -1,0 +1,144 @@
+<style>
+.main-chair-style {
+    padding: 5.5rem;
+}  
+.main-chair-style h3.main-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 2rem;
+}
+.main-chair-style .main-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-chair-style .inner {
+  width: 50%;
+  position: relative;
+  padding: 1rem;
+}
+.main-chair-style .inner img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.main-chair-style .inner-contant {
+  position: absolute;
+  bottom: 0;
+  padding: 5rem;
+}
+.main-chair-style .inner-contant h3 {
+    font-size: 23px;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 3px;
+}
+.main-chair-style .inner-contant a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media(max-width: 1199px){
+  .main-chair-style h3.main-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.main-chair-style .inner-contant h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.main-chair-style .inner-contant a {
+  font-size: 15px;
+  font-weight: 600;
+}
+.main-chair-style .inner-contant {
+    padding: 3rem 2.5rem;
+    max-width: 70%;
+}
+}
+
+@media(max-width:767px){
+  .main-chair-style .inner {
+    width: 100%;
+    padding: 1rem 1rem 0.5rem;
+}
+.main-chair-style {
+    padding: 3rem 1rem;
+}
+.main-chair-style h3.main-title {
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+</style>
+
+<div class="main-chair-style">
+  <h3 class="main-title">{{ section.settings.head }}</h3> 
+  <div class="main-flex">
+    {% for block in section.blocks %}
+    <div class="inner">
+      <img src="{{ block.settings.image | img_url: "master" }}" alt="chair {{ forloop.index }}" loading="lazy" />  
+      <div class="inner-contant">
+        <h3>{{ block.settings.sub-head}}</h3>
+        <span><a href="{{ block.settings.link-list }}">{{ block.settings.head-3 }}</a></span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+</div>
+
+{% schema %}
+{
+  "name": "Choose Chair Style",
+  "settings": [
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Head"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+     {
+       "name": "Choose Chair Style",
+       "type": "image",
+       "settings": [
+
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "sub-head",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "head-3",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "link-list",
+      "label": "Collection Link"
+    }
+    
+         
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Choose Chair Style",
+      "category": "image"
+    }
+  ]
+}
+{% endschema %}

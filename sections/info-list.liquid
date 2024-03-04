@@ -1,0 +1,108 @@
+<style>
+  .main-info-list ul {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    flex-wrap: wrap;
+} 
+.main-info-list li {
+    width: 16.66%;
+    padding: 2rem 1rem;
+    border: 1px solid #d4d4d4;
+    padding-left: 5rem;
+    line-height: 2rem;
+}
+.main-info-list ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+}
+.main-info-list ul li a * {
+  margin: 0;
+}
+.main-info-list ul li a img {
+  position: absolute;
+  right: -40px;
+  bottom: 2px;
+}
+
+@media(max-width: 1300px){
+.main-info-list li {
+    padding-left: 3rem;
+}
+}
+
+@media(max-width: 1199px){
+  .main-info-list ul {
+    flex-wrap: wrap;
+}
+.main-info-list li {
+    width: 33.33%;
+    padding-left: 2rem;
+}
+}
+
+@media(max-width:767px){
+.main-info-list li {
+    width: 50%;
+}
+.main-info-list ul li a img {
+  right: -33px;
+  bottom: 3px;
+  max-width: 16px;
+}
+}
+  
+</style>
+
+<div class="main-info-list">
+  <ul>
+    {% for block in section.blocks %}
+      <li><a href="{{ block.settings.link }}">{{ block.settings.text }}<img src="{{ section.settings.image | img_url: "master" }}" loading="lazy" alt="link" ></a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Info List",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+     {
+       "name": "Info List",
+       "type": "image",
+       "settings": [
+         {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Add Link"
+    }
+         
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Info List",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %} 

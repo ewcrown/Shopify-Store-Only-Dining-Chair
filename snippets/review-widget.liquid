@@ -1,0 +1,41 @@
+<style>
+    .custom-reviews{
+        margin: 1rem 0;
+    }
+    .review-star-text{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-weight: 700;
+        line-height: normal;
+        gap: 1rem;
+    }
+
+    @media(max-width: 767px){
+        .review-star-text {
+            line-height: 1.4;
+        }
+        .custom-reviews svg {
+            width: 11rem;
+        }
+        .custom-reviews .review-star-text svg {
+            width: 9rem;
+        }
+    }
+</style>
+
+{% if settings.reviews-star != blank %}
+    <div class="custom-reviews">
+        {% if settings.reviews-image != blank %}
+            <div class="review-image">
+                {{ settings.reviews-image }}
+            </div>
+        {% endif %}
+        <div class="review-star-text">
+            {{ settings.reviews-star }}
+            {% if settings.reviews-text != blank %}
+                <span>{{ settings.reviews-text }}</span>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}

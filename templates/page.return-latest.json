@@ -1,0 +1,125 @@
+{
+  "sections": {
+    "540e0c63-2422-4c46-8123-ac9cccc19330": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16517943984297__540e0c63-2422-4c46-8123-ac9cccc19330-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_-_Contact_Us_Copy.png",
+            "title": "",
+            "text": "<p>Email us at <a href=\"mailto:support@onlydiningchairs.com.au\" title=\"mailto:support@onlydiningchairs.com.au\">support@onlydiningchairs.com.au<\/a> within 30 days of receiving your dining chairs and because every situation is different - we will provide the next steps on what to do<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16517943984297__540e0c63-2422-4c46-8123-ac9cccc19330-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2._Post_Your_Return_Copy.png",
+            "title": "",
+            "text": "<p>If we have told you to post your return- we will provide you with return shipping labels if agreed and you will have 3 days to post your chairs.<br\/><br\/>Make sure your items are securely wrapped and your parcel contains all the information requested.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16517943984297__540e0c63-2422-4c46-8123-ac9cccc19330-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3._We_ll_Do_The_Rest_Copy.png",
+            "title": "",
+            "text": "<p>Once we have processed your return you will receive notification via email. All successful returns will be credited to the original method used for payment.<br\/><br\/>Please note refunds can take 3 to 5 working days (Monday to Friday, excluding bank holidays) to show into your account.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16517943984297__540e0c63-2422-4c46-8123-ac9cccc19330-column-1",
+        "template--16517943984297__540e0c63-2422-4c46-8123-ac9cccc19330-column-2",
+        "template--16517943984297__540e0c63-2422-4c46-8123-ac9cccc19330-column-3"
+      ],
+      "settings": {
+        "title": "Returns",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "b4442f91-a86d-44e0-9ba7-247a57edd671": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16517943984297__b4442f91-a86d-44e0-9ba7-247a57edd671-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I Exchange?",
+            "icon": "none",
+            "row_content": "<p>A: No There is no exchanges. Instead your item would become a \"Change of Mind\" situation if eligible and we arrange a return of item and refund then you can place a new product order with the one you are after.<\/p><p>Depending on which chairs you choose, there may be new shipping costs.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16517943984297__b4442f91-a86d-44e0-9ba7-247a57edd671-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "My Chairs Have Arrived Damaged Or Faulty ( Damaged On Arrival )",
+            "icon": "none",
+            "row_content": "<p>A: DOA only applies to items that are broken when arrived or appear to be not functioning on initial usage.<\/p><p>The following terms and conditions apply to Damaged On Arrival:<\/p><p>You must check your item(s) and report the damages or faults (pictures or videos) to us by email <a href=\"mailto:support@onlydiningchairs.com.au\">support@onlydiningchairs.com.au<\/a> after receiving the item(s) within 48 hours so we can alert the transport company associated with your delivery.<\/p><p>We reserve the right to refuse any claims made after this time frame or additional charges (postage and handling) may apply.<\/p><p>Failure to claim within this period constitutes full acceptance of the goods.<\/p><p>Please do not return the faulty item to us without our approval.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16517943984297__b4442f91-a86d-44e0-9ba7-247a57edd671-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Should I Do If There Is A Part Missing?",
+            "icon": "none",
+            "row_content": "<p>A: Please confirm that you have checked the packaging very thoroughly as the small components might become loose during the shipping.<\/p><p>If there is a part missing, please contact us immediately via email support@onlydiningchairs.com.au so that we can offer our assistance.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16517943984297__b4442f91-a86d-44e0-9ba7-247a57edd671-collapsible_row-1",
+        "template--16517943984297__b4442f91-a86d-44e0-9ba7-247a57edd671-collapsible_row-2",
+        "template--16517943984297__b4442f91-a86d-44e0-9ba7-247a57edd671-collapsible_row-3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "RETURN FAQS:",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "btn-text": "",
+        "btn-link": "",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "540e0c63-2422-4c46-8123-ac9cccc19330",
+    "main",
+    "b4442f91-a86d-44e0-9ba7-247a57edd671"
+  ]
+}

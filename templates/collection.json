@@ -1,0 +1,321 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "a94c68c8-d609-44a8-af53-11bac5ddae90": {
+      "type": "rich-text",
+      "blocks": {
+        "665195c2-763b-49a3-9b4d-f18e26973ff5": {
+          "type": "text",
+          "settings": {
+            "text": "{{ collection.metafields.custom.collection_description | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "665195c2-763b-49a3-9b4d-f18e26973ff5"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "bcc3027b-8e3f-4941-9112-10664779a475": {
+          "type": "text",
+          "settings": {
+            "collection-text": "BEST SELLING DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/best-selling-dining-chairs"
+          }
+        },
+        "26a2acf4-8915-43d0-9ccd-ce6e62b040ff": {
+          "type": "text",
+          "settings": {
+            "collection-text": "COASTAL DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/coastal-dining-chairs"
+          }
+        },
+        "17ed8056-f4ad-4f5d-8a5f-74f688ba7d8a": {
+          "type": "text",
+          "settings": {
+            "collection-text": "COMMERCIAL DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/commercial-dining-chairs"
+          }
+        },
+        "fbc97300-f592-47b4-8c13-7d5ec4a33d6f": {
+          "type": "text",
+          "settings": {
+            "collection-text": "CONTEMPORARY DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/contemporary-dining-chairs"
+          }
+        },
+        "754a8d62-0ba1-4b6b-8fbc-7e70f9a72bea": {
+          "type": "text",
+          "settings": {
+            "collection-text": "DINING CHAIRS AUSTRALIA",
+            "collection-link": "shopify:\/\/collections\/dining-chairs-australia"
+          }
+        },
+        "1894d077-4530-4a75-9d84-eed2831f9cd2": {
+          "type": "text",
+          "settings": {
+            "collection-text": "FARMHOUSE DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/country-farmhouse-dining-chairs"
+          }
+        },
+        "c66f3b0c-f6c8-4e24-8616-9fcffb4e43f3": {
+          "type": "text",
+          "settings": {
+            "collection-text": "FRENCH PROVINCIAL DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/french-provincial-dining-chairs"
+          }
+        },
+        "88cfbe16-ae83-4c33-aeab-c6b3cadc4be4": {
+          "type": "text",
+          "settings": {
+            "collection-text": "HAMPTONS DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/hamptons-dining-chairs"
+          }
+        },
+        "2c8d9fa2-40c3-42d5-9abb-63ea85e8b725": {
+          "type": "text",
+          "settings": {
+            "collection-text": "INDUSTRIAL DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/industrial-dining-chairs"
+          }
+        },
+        "f7fc9375-2975-4177-97a8-be6c093d1971": {
+          "type": "text",
+          "settings": {
+            "collection-text": "LEATHER DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/leather-dining-chairs-australia"
+          }
+        },
+        "02704ec9-0707-4912-b3f4-08573b7fc764": {
+          "type": "text",
+          "settings": {
+            "collection-text": "METAL DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/metal-dining-chairs"
+          }
+        },
+        "53f80193-bf88-4cc0-937c-0b54d70ebb50": {
+          "type": "text",
+          "settings": {
+            "collection-text": "MID CENTURY DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/mid-century-dining-chairs"
+          }
+        },
+        "132e88f1-784f-42ed-a54e-ebe7a407a618": {
+          "type": "text",
+          "settings": {
+            "collection-text": "MODERN DINING CHAIRS AUSTRALIA",
+            "collection-link": "shopify:\/\/collections\/modern-dining-chairs"
+          }
+        },
+        "8767cbc7-e841-407a-93c9-e0b08c7f5c90": {
+          "type": "text",
+          "settings": {
+            "collection-text": "OUTDOOR DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/outdoor-dining-chairs-australia"
+          }
+        },
+        "ed9bbb1a-eda9-4122-b79f-845dc0e6d2a0": {
+          "type": "text",
+          "settings": {
+            "collection-text": "PLASTIC DINING CHAIRS & RESIN DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/resin-plastic-dining-chairs"
+          }
+        },
+        "6c116c3a-c609-494f-9f10-2d82f13f4ef5": {
+          "type": "text",
+          "settings": {
+            "collection-text": "RATTAN | WICKER | CANE DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/cane-wicker-rattan-dining-chairs"
+          }
+        },
+        "a8bc9d5d-b37b-4ba3-a235-986fd4fe9405": {
+          "type": "text",
+          "settings": {
+            "collection-text": "SCANDINAVIAN DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/scandinavian-dining-chairs"
+          }
+        },
+        "9015863b-9ff8-4a51-8800-ee80f5c702fe": {
+          "type": "text",
+          "settings": {
+            "collection-text": "UPHOLSTERED DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/upholstered-dining-chairs"
+          }
+        },
+        "8f5fa47c-9a99-4551-a7b7-c90702036946": {
+          "type": "text",
+          "settings": {
+            "collection-text": "VALUE DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/value-dining-chairs"
+          }
+        },
+        "389c3578-d5ad-44d6-ae23-4c352a4323cd": {
+          "type": "text",
+          "settings": {
+            "collection-text": "VELVET DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/velvet-dining-chairs"
+          }
+        },
+        "d0791bc2-31e0-4108-8991-8db88a161027": {
+          "type": "text",
+          "settings": {
+            "collection-text": "WOODEN DINING CHAIRS",
+            "collection-link": "shopify:\/\/collections\/wooden-dining-chairs"
+          }
+        }
+      },
+      "block_order": [
+        "bcc3027b-8e3f-4941-9112-10664779a475",
+        "26a2acf4-8915-43d0-9ccd-ce6e62b040ff",
+        "17ed8056-f4ad-4f5d-8a5f-74f688ba7d8a",
+        "fbc97300-f592-47b4-8c13-7d5ec4a33d6f",
+        "754a8d62-0ba1-4b6b-8fbc-7e70f9a72bea",
+        "1894d077-4530-4a75-9d84-eed2831f9cd2",
+        "c66f3b0c-f6c8-4e24-8616-9fcffb4e43f3",
+        "88cfbe16-ae83-4c33-aeab-c6b3cadc4be4",
+        "2c8d9fa2-40c3-42d5-9abb-63ea85e8b725",
+        "f7fc9375-2975-4177-97a8-be6c093d1971",
+        "02704ec9-0707-4912-b3f4-08573b7fc764",
+        "53f80193-bf88-4cc0-937c-0b54d70ebb50",
+        "132e88f1-784f-42ed-a54e-ebe7a407a618",
+        "8767cbc7-e841-407a-93c9-e0b08c7f5c90",
+        "ed9bbb1a-eda9-4122-b79f-845dc0e6d2a0",
+        "6c116c3a-c609-494f-9f10-2d82f13f4ef5",
+        "a8bc9d5d-b37b-4ba3-a235-986fd4fe9405",
+        "9015863b-9ff8-4a51-8800-ee80f5c702fe",
+        "8f5fa47c-9a99-4551-a7b7-c90702036946",
+        "389c3578-d5ad-44d6-ae23-4c352a4323cd",
+        "d0791bc2-31e0-4108-8991-8db88a161027"
+      ],
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "parent-text": "COLLECTIONS",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17d89265-2dfc-4cb4-bf58-d0ad14da05e7": {
+      "type": "Brand-logo-list",
+      "blocks": {
+        "15f53d00-32d4-4d01-b665-969638479670": {
+          "type": "image",
+          "settings": {
+            "text": "5 Year Warranty",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164457.png"
+          }
+        },
+        "01881209-0b94-4f13-b449-9701989f073e": {
+          "type": "image",
+          "settings": {
+            "text": "Regular Wear &amp; Tear\nCoverage",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99320_63251ff4-598c-4e72-9cd9-989c1b3daced.png"
+          }
+        },
+        "931b91c2-31fe-48d2-ac04-29a561cf98fc": {
+          "type": "image",
+          "settings": {
+            "text": "Quality Money Back\nGuarantee",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164458_fb8b8737-914a-4eab-a72a-5dc49ae56905.png"
+          }
+        },
+        "fba44987-b1e9-4403-b748-b88b4f242e5d": {
+          "type": "image",
+          "settings": {
+            "text": "150+ 5 Star Reviews",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_98200c14-3118-4b6e-9eb1-a45a643283e9.png"
+          }
+        },
+        "8cc7a6ca-9ef1-46ef-9306-0663333eb7c1": {
+          "type": "image",
+          "settings": {
+            "text": "0% Interest Free",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_1.png"
+          }
+        },
+        "22ba1ec3-533a-4018-9a24-9bdfbd74d6ab": {
+          "type": "image",
+          "settings": {
+            "text": "Designed In Australia",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "15f53d00-32d4-4d01-b665-969638479670",
+        "01881209-0b94-4f13-b449-9701989f073e",
+        "931b91c2-31fe-48d2-ac04-29a561cf98fc",
+        "fba44987-b1e9-4403-b748-b88b4f242e5d",
+        "8cc7a6ca-9ef1-46ef-9306-0663333eb7c1",
+        "22ba1ec3-533a-4018-9a24-9bdfbd74d6ab"
+      ],
+      "settings": {
+        "bg-color": "#ececec",
+        "color": "#000000"
+      }
+    },
+    "1700234561cfc57904": {
+      "type": "apps",
+      "blocks": {
+        "d5b4f228-8096-4520-8ca8-5be9fcc3cc29": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "d5b4f228-8096-4520-8ca8-5be9fcc3cc29"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "a94c68c8-d609-44a8-af53-11bac5ddae90",
+    "product-grid",
+    "17d89265-2dfc-4cb4-bf58-d0ad14da05e7",
+    "1700234561cfc57904"
+  ]
+}

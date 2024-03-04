@@ -1,0 +1,257 @@
+<style>
+    .image-with-form .main-img {
+      position: relative;
+  }
+  .image-with-form .main-img > img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .image-with-form .inner-form-text {
+    max-width: 435px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 9%;
+      padding: 3rem 0;
+  }
+  .image-with-form .inner-form-text .head {
+    background-color: #EBB64A;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #000;
+    box-shadow: 0px 2px 8px 1px #00000082;
+    padding: 5px;
+  }
+  .image-with-form .inner-form-text .three-img {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 5px;
+  }
+
+  .image-with-form .bottom-img-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 1.2rem 0;
+  }
+  .image-with-form .b-head {
+      font-size: 15px;
+      color: #EBB64A;
+      font-weight: bold;
+      line-height: 1.2;
+  }
+  .image-with-form .b-text {
+      font-size: 12px;
+      color: #000;
+      line-height: 1.2;
+      margin-top: 5px;
+  }
+  .b-img {
+    flex: 0 0 17%;
+    margin-right: 1.5rem;
+  }
+
+  @media(max-width: 1300px){
+    .image-with-form .inner-form-text .head {
+      font-size: 20px;
+    }
+    .image-with-form .inner-form-text {
+      padding: 2rem 0;
+    }
+  }
+
+  @media(max-width: 1199px){
+    .image-with-form .inner-form-text {
+      max-width: 100%;
+      position: unset;
+      transform: none;
+    }
+    .image-with-form .bottom-img-text {
+      width: 40%;
+    }
+  }
+
+  @media(max-width: 767px){
+    .image-with-form .bottom-img-text {
+      width: 80%;
+    }
+  }
+</style>
+
+<div class="image-with-form">
+  <div class="main-img">
+    {% if section.settings['image-main'] != blank %}
+      <img src="{{ section.settings.image-main | img_url: "master" }}" loading="lazy" alt="banner">
+    {% endif %}
+    <div class="inner-form-text">
+      <div class="head">
+        {% if section.settings.head != blank %}
+          {{ section.settings.head }}
+        {% endif %}
+      </div>
+      <div class="three-img">
+        {% if section.settings['image-1'] != blank %}
+          <div class="inner-img">
+            <img src="{{ section.settings.image-1 | img_url: "master" }}" loading="lazy" alt="latitudepay">
+          </div>
+        {% endif %}
+        {% if section.settings['image-2'] != blank %}
+          <div class="inner-img">
+            <img src="{{ section.settings.image-2 | img_url: "master" }}" loading="lazy" alt="afterpay">
+          </div>
+        {% endif %}
+        {% if section.settings['image-3'] != blank %}
+          <div class="inner-img">
+            <img src="{{ section.settings.image-3 | img_url: "master" }}" loading="lazy" alt="zip">
+          </div>
+        {% endif %}
+      </div>
+      <div class="bottom-img-text">
+        {% if section.settings['image-4'] != blank %}
+          <div class="b-img">
+            <img src="{{ section.settings.image-4 | img_url: "50px" }}" loading="lazy" alt="installment">
+          </div>
+        {% endif %}
+        <div class="b-contant">
+          {% if section.settings['bhead-1'] != blank %}
+            <div class="b-head">{{ section.settings['bhead-1'] }}</div>
+          {% endif %}
+          {% if section.settings['btext-1'] != blank %}
+            <div class="b-text">{{ section.settings['btext-1'] }}</div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="bottom-img-text">
+        {% if section.settings['image-5'] != blank %}
+          <div class="b-img">
+            <img src="{{ section.settings.image-5 | img_url: "50px" }}" loading="lazy" alt="zero interest">
+          </div>
+        {% endif %}
+        <div class="b-contant">
+          {% if section.settings['bhead-2'] != blank %}
+            <div class="b-head">{{ section.settings['bhead-2'] }}</div>
+          {% endif %}
+          {% if section.settings['btext-2'] != blank %}
+            <div class="b-text">{{ section.settings['btext-2'] }}</div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="bottom-img-text">
+        {% if section.settings['image-6'] != blank %}
+          <div class="b-img">
+            <img src="{{ section.settings.image-6 | img_url: "50px" }}" loading="lazy" alt="no repay">
+          </div>
+        {% endif %}
+        <div class="b-contant">
+          {% if section.settings['bhead-3'] != blank %}
+            <div class="b-head">{{ section.settings['bhead-3'] }}</div>
+          {% endif %}
+          {% if section.settings['btext-3'] != blank %}
+            <div class="b-text">{{ section.settings['btext-3'] }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with form text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image-main",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-1",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-2",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-3",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-4",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "bhead-1",
+      "label": "Head"
+    },
+    {
+      "type": "text",
+      "id": "btext-1",
+      "label": "text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-5",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "bhead-2",
+      "label": "Head"
+    },
+    {
+      "type": "text",
+      "id": "btext-2",
+      "label": "text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-6",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "bhead-3",
+      "label": "Head"
+    },
+    {
+      "type": "text",
+      "id": "btext-3",
+      "label": "text"
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+     {
+       "name": "Image List",
+       "type": "image",
+       "settings": [
+
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Image with form text",
+      "category": "image"
+    }
+  ]
+}
+{% endschema %}

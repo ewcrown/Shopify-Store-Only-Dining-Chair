@@ -1,0 +1,226 @@
+{
+  "sections": {
+    "19c4499c-9d3e-4c18-9901-fd881d1c9849": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16517957255337__19c4499c-9d3e-4c18-9901-fd881d1c9849-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1._Order_Confirmation_Copy.png",
+            "title": "",
+            "text": "<p>Once ordered you will receive a order confirmation via email<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16517957255337__19c4499c-9d3e-4c18-9901-fd881d1c9849-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2._Order_Fulfillment_Copy.png",
+            "title": "",
+            "text": "<p>Please allow 2 to 3 business days for picking \/ packing \/ shipping arrangements to be made<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16517957255337__19c4499c-9d3e-4c18-9901-fd881d1c9849-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3._Order_Tracking_Copy.png",
+            "title": "",
+            "text": "<p>You will receive an email with your delivery tracking number<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "10dfb04f-f804-4311-accc-e2cd78f83839": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4._Enjoy_Your_Chairs_1.png",
+            "title": "",
+            "text": "<p>Your chairs are delivered and your dining room transformed!<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16517957255337__19c4499c-9d3e-4c18-9901-fd881d1c9849-column-1",
+        "template--16517957255337__19c4499c-9d3e-4c18-9901-fd881d1c9849-column-2",
+        "template--16517957255337__19c4499c-9d3e-4c18-9901-fd881d1c9849-column-3",
+        "10dfb04f-f804-4311-accc-e2cd78f83839"
+      ],
+      "settings": {
+        "title": "YOUR ONLY DINING CHAIRS PATHWAY:",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "7c1feb88-663e-458b-b63b-615c886ce0cb": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16517957255337__7c1feb88-663e-458b-b63b-615c886ce0cb-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What If My Freight Is Damaged?",
+            "icon": "none",
+            "row_content": "<p>A: check your item(s) and report the damages or faults(pictures or videos) to us via our email address:<a href=\"mailto:support@onlydiningchairs.com.au\" title=\"mailto:support@onlydiningchairs.com.au\">support@onlydiningchairs.com.au<\/a> after receiving the item(s) within 48 hours so we can alert the transport company associated with your delivery. We will be in constant communication with you until the issue is resolved<\/p>",
+            "page": ""
+          }
+        },
+        "template--16517957255337__7c1feb88-663e-458b-b63b-615c886ce0cb-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Are The Chairs Delivered?",
+            "icon": "none",
+            "row_content": "<p>A: Chairs are shipped mostly via TNT, Toll and Australia Post but on the odd occasion our suppliers may use Couriers Please, Fastway, Hunter Express or Allied Express, according to the size and weight of the item. A tracking number that is emailed to you will also be updated through out the chairs journey from warehouse to your door.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16517957255337__7c1feb88-663e-458b-b63b-615c886ce0cb-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can We Dictate A Delivery Time?",
+            "icon": "none",
+            "row_content": "<p>A: No. We are unable to guarantee a delivery on any specific dates or times as this is not something our delivery partners would be able to guarantee either.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16517957255337__7c1feb88-663e-458b-b63b-615c886ce0cb-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can We Authorise To Leave Safe?",
+            "icon": "none",
+            "row_content": "<p>A: Yes you can- once you add your chairs to cart- you will be prompted with a question that asks you for permission to leave safe and where would you like it left<\/p>",
+            "page": ""
+          }
+        },
+        "d6061ca0-903d-4b85-a568-b225969a4c36": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What If We Miss The Courier?",
+            "icon": "none",
+            "row_content": "<p>A: Depending on carrier- your chairs will be taken to their nearest depot and instructions will be left with a card at your front door or letter box on where to collect them from.<\/p><p>Depending on carrier- you may be able to organise a local re-delivery from their depot to your premises at your expense<\/p>",
+            "page": ""
+          }
+        },
+        "06d8854c-f7b4-445c-80cd-98ce74cbf946": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can We Deliver To Post Office Boxes?",
+            "icon": "none",
+            "row_content": "<p>A: No. Sorry we are unable to deliver to a PO Box or Parcel Locker address simply the boxes are too large to be handled by AusPost.<\/p>",
+            "page": ""
+          }
+        },
+        "76929b3b-eb4f-40c0-9af5-f0167537f85e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can We Deliver To Remote Locations?",
+            "icon": "none",
+            "row_content": "<p>A: Under rare circumstances, instead of delivering to-your-door, couriers may be required to deliver to your local post office or collection point. If so, the courier company will provide instructions on how to retrieve your items.<\/p><p>Each product is unique in its size and weight, some courier companies are restricted in the areas they service and on the rare occasion, they are unable to deliver to certain regional & remote areas - we will reach out to you if this does occur and refund you.<\/p>",
+            "page": ""
+          }
+        },
+        "32ced680-49c2-4023-acdb-a12d346dc939": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Happens If We Have Multiple Deliveries?",
+            "icon": "none",
+            "row_content": "<p>If you have ordered multiple items you may receive multiple deliveries. If your order is incomplete (split delivery by the courier, or dispatched from separate warehouses to speed up the delivery process) please check your shipping confirmation email and tracking details for additional information.<\/p>",
+            "page": ""
+          }
+        },
+        "a8a4754a-5028-4a11-a62d-78eae4ef5995": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can We Redirect The Delivery?",
+            "icon": "none",
+            "row_content": "<p>A: Please reach out to us at <a href=\"mailto:support@onlydiningchairs.com.au\" title=\"mailto:support@onlydiningchairs.com.au\">support@onlydiningchairs.com.au<\/a> and we will see what we can do- if the chairs are too far gone down the delivery process then the carrier may not be able to accommodate and extra re-delivery fees may apply.<\/p>",
+            "page": ""
+          }
+        },
+        "b855c7f0-13be-45ff-ae23-64788916e547": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where Can I Find My Tracking?",
+            "icon": "none",
+            "row_content": "<p>Tracking information will be emailed to you.<\/p>",
+            "page": ""
+          }
+        },
+        "95d3b504-4a18-43fc-b185-9b84f273633b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Long Does It Take To Ship?",
+            "icon": "none",
+            "row_content": "<p>The estimated delivery time frames are:<\/p><p><\/p><p>For customers in VIC, approximately 2 - 7 business days<\/p><p>For customers in NSW, SA, ACT, approximately 3 - 7 business days<\/p><p>For customers in QLD, NT,WA<\/p><p>For customers in TAS, approximately 4 - 10 working days<\/p>",
+            "page": ""
+          }
+        },
+        "170a9411-ee81-41f9-9582-cb42c51c5de5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Can I Cancel My Order?",
+            "icon": "none",
+            "row_content": "<p>Please note that we can only cancel your order if the item has not been dispatched from our suppiler's warehouse.<\/p><p>As we operate a fast and automated dispatching system, but need time to respond to your message, we can only do our best to help.<\/p><p>Please email us at <a href=\"mailto:support@onlydiningchairs.com.au\" title=\"mailto:support@onlydiningchairs.com.au\">support@onlydiningchairs.com.au<\/a> if you wish to cancel.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16517957255337__7c1feb88-663e-458b-b63b-615c886ce0cb-collapsible_row-1",
+        "template--16517957255337__7c1feb88-663e-458b-b63b-615c886ce0cb-collapsible_row-2",
+        "template--16517957255337__7c1feb88-663e-458b-b63b-615c886ce0cb-collapsible_row-3",
+        "template--16517957255337__7c1feb88-663e-458b-b63b-615c886ce0cb-collapsible_row-4",
+        "d6061ca0-903d-4b85-a568-b225969a4c36",
+        "06d8854c-f7b4-445c-80cd-98ce74cbf946",
+        "76929b3b-eb4f-40c0-9af5-f0167537f85e",
+        "32ced680-49c2-4023-acdb-a12d346dc939",
+        "a8a4754a-5028-4a11-a62d-78eae4ef5995",
+        "b855c7f0-13be-45ff-ae23-64788916e547",
+        "95d3b504-4a18-43fc-b185-9b84f273633b",
+        "170a9411-ee81-41f9-9582-cb42c51c5de5"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "SHIPPING FAQS:",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "btn-text": "",
+        "btn-link": "",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "19c4499c-9d3e-4c18-9901-fd881d1c9849",
+    "main",
+    "7c1feb88-663e-458b-b63b-615c886ce0cb"
+  ]
+}

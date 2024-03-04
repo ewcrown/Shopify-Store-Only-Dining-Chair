@@ -1,0 +1,254 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+.desktop{
+    display: block !important;
+}
+.mobile{
+    display: none !important;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: inherit;
+}
+@media(max-width: 767px){
+    .desktop{
+        display: none !important;
+    }
+    .mobile{
+        display: block !important;
+    }
+}
+.wp_snap-scroll::-webkit-scrollbar {
+    display: none;
+}
+summary.header__icon.header__icon--search.header__icon--summary.link.focus-inset.modal__toggle {
+    width: auto;
+    height: auto;
+    text-decoration: none;
+}
+.search-label p:last-child {
+    padding-top: 2rem;
+    color: #B7B7B7;
+    border-bottom: 1px solid #707070;
+    height: 3rem;
+    width: 230px;
+    font-weight: 400;
+}
+.gold {
+    color: #BF892F !important;
+}
+.search-label p {
+    font-size: 12px;
+    letter-spacing: 0;
+    margin: 0;
+    font-weight: 500;
+}
+.search-label {
+    margin-left: 1rem;
+}
+.custom-search-wrapper {
+    display: flex;
+}
+.header__icons span.nz-bag {
+    font-size: 12px;
+    font-weight: 500;
+}
+.header__icons .nz-bag-money-flex {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.8rem;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+.header__icons .nz-bag-money-flex span.bag-money {
+    color: #B22200;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: -8px;
+}
+.custom-button {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    background: #EBB64A;
+    height: 60px;
+    width: 258px;
+    line-height: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    letter-spacing: 0;
+}
+.nz-header {
+    text-align: center;
+    background-color: #EBB64A; 
+}
+.nz-header ul.list-menu.list-menu--inline {
+    text-transform: uppercase;
+}
+section#shopify-section-template--16197792071849__featured_collection .color-background-1.isolate.gradient {
+    padding: 5rem 0rem;
+}
+span.stamped-badge-caption {
+    font-weight: 600;
+    font-size: 13px;
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
+}
+.fa-star-half-o:before, .fa-star-o:before, .fa-star:before, .stamped-fa-star-half-o:before, .stamped-fa-star-o:before, .stamped-fa-star:before {
+    font-size: 15px;
+}
+span.stamped-product-reviews-badge {
+    margin-top: 1rem;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 0;
+    left: auto;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 0;
+    right: auto;
+}
+.swiper-custom-button:after {
+    display: none;
+}
+.swiper-custom-button {
+    width: auto;
+    height: auto;
+    display: block;
+}
+h2.rich-text__heading.rte.inline-richtext.h1.scroll-trigger.animate--slide-in {
+    font-size: 30px;
+    font-weight: 700 !important;
+    color: #000;
+}
+.button:after, .shopify-challenge__button:after, .customer button:after, .shopify-payment-button__button--unbranded:after{
+      position: inherit;
+      display:none;
+}
+.ctsm-app-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.footer-block.grid__item.scroll-trigger.animate--slide-in {
+    width: 18%;
+}
+.collection.page-width {
+    padding: 0rem 1rem;
+}
+.collection-hero__inner.page-width.scroll-trigger.animate--fade-in {
+    padding: 0rem 1rem;
+}
+.collection.page-width .card__information {
+    text-align: center;
+}
+#stamped-reviews-widget {
+    font-family: 'Raleway' !important;
+}
+#stamped-reviews-widget[data-widget-type="full-page"] .stamped-widget-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 4rem !important;
+}
+#stamped-reviews-widget[data-widget-type="full-page"] span.stamped-widget-stars.stamped-style-color-star {
+    display: none;
+}
+div#stamped-reviews-widget[data-widget-type="full-page"], div#stamped-reviews-widget[data-widget-type="full-page-nps"] {
+    padding: 6rem 0 1rem;
+}
+.template-collection div#stamped-reviews-widget[data-widget-type="full-page"], div#stamped-reviews-widget[data-widget-type="full-page-nps"] {
+    padding: 4rem 0;
+}
+.collection-hero__inner.page-width .collection-hero__description.rte {
+  color: #000;
+}
+.product__description.rte.quick-add-hidden ul {
+    padding-left: 0;
+}
+.product__tax.caption.rte {
+    display: none;
+}
+.product__info-wrapper.grid__item.scroll-trigger.animate--slide-in variant-radios#variant-radios-template--16197792137385__main {
+    display: none;
+}
+.product__info-wrapper.grid__item.scroll-trigger.animate--slide-in .price__container {
+    width: 100%;
+}
+.section-template--16197792137385__66103434-eef6-41d9-9d9c-311d0868d05d-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+  .stamped-header-title {
+    font-size: 30px;
+    margin: 0 0 45px;
+    width: 100%;
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+#stamped-main-widget {
+    margin: 1em 0px;
+}
+.stamped-full-page-tabs {
+    display: none !important;
+}
+@media(max-width: 992px){
+  .header__search .search-label {
+    display: none;
+    }
+    .header__icons {
+        align-items: center;
+    }
+    .custom-search-wrapper svg {
+        width: 26px;
+        height: 26px;
+        position: relative;
+        top: 1px;
+    }
+}
+@media(max-width: 767px){
+    body:not(.template-index) .header-wrapper {
+        border-bottom: 1px solid #ddd;
+    }
+.header__icons .nz-bag-money-flex {
+    display: none;
+}
+h2.rich-text__heading.rte.inline-richtext.h1.scroll-trigger.animate--slide-in {
+    font-size: 20px;
+}
+.footer-block.grid__item.scroll-trigger.animate--slide-in {
+    width: 100%;
+}
+.custom-reviews {
+    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .custom-reviews img {
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
+  .stamped-header-title {
+    font-size: 20px;
+    margin: 0 0 30px;
+    }
+    #stamped-reviews-widget[data-widget-type="full-page"] .stamped-widget-title {
+        font-size: 20px;
+        margin-bottom: 3rem !important;
+    }
+    div#stamped-reviews-widget[data-widget-type="full-page"], div#stamped-reviews-widget[data-widget-type="full-page-nps"] {
+        padding: 3rem 0 0;
+    }
+    .template-collection div#stamped-reviews-widget[data-widget-type="full-page"], div#stamped-reviews-widget[data-widget-type="full-page-nps"] {
+        padding: 3rem 0;
+    }
+}

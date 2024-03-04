@@ -1,0 +1,141 @@
+<style>
+.annoucement-top-bar ul.wp_annoucement-wrapper {
+  all: unset;
+  display: flex;
+  letter-spacing: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.annoucement-top-bar li.wp_annoucement {
+    all: unset;
+}
+.annoucement-top-bar {
+    background-color: black;
+    color: #fff;
+    padding: 7px 50px;
+}
+.annoucement-top-bar .wp_annoucement-image {
+    display: flex;
+    align-items: center;
+}
+.wp_annoucement-image img {
+  margin-right: 6px;
+}
+.annoucement-top-bar .wp_annoucement-wrapper.wp_snap-scroll span {
+    font-size: 12px;
+}
+.annoucement-top-bar li.wp_annoucement.wp_scroll-item:nth-child(4) {
+  margin-left: 20%;
+}
+
+@media(max-width:1199px){
+  .annoucement-top-bar .wp_annoucement-wrapper.wp_snap-scroll span {
+    font-size: 9px;
+  }
+  .annoucement-top-bar {
+    padding: 10px 25px;
+  }
+  .annoucement-top-bar li.wp_annoucement {
+    all: unset;
+    white-space: nowrap;
+    margin-right: 5rem;
+  }
+  .annoucement-top-bar .wp_snap-scroll.wp_annoucement-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: X mandatory;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .annoucement-top-bar .wp_snap-scroll .wp_scroll-item {
+    scroll-snap-align: start;
+  }
+}
+  
+@media (max-width: 900px){
+.wp_annoucement-image img {
+  max-width: 2rem;
+  margin-right: 4px;
+}
+.annoucement-top-bar li.wp_annoucement.wp_scroll-item.ml {
+    margin-left: 0;
+}
+.annoucement-top-bar .wp_annoucement-wrapper.wp_snap-scroll span {
+    font-size: 8px;
+}
+.annoucement-top-bar li.wp_annoucement {
+  margin-right: 2rem;
+}
+}
+
+@media(max-width: 767px){
+  .annoucement-top-bar li.wp_annoucement.wp_scroll-item:nth-child(4) {
+    margin-left: 0;
+  }
+  .annoucement-top-bar .wp_snap-scroll .wp_scroll-item {
+    flex: 0 0 45%;
+  }
+  .annoucement-top-bar {
+    padding: 10px 15px;
+  }
+}
+  
+</style>
+
+<div class="annoucement-top-bar" style="background:{{ section.settings.bg }}; color: {{ section.settings.color }};">
+  <ul class="wp_annoucement-wrapper wp_snap-scroll"> 
+    {% for block in section.blocks %}
+      <li class="wp_annoucement wp_scroll-item">
+        <div class="wp_annoucement-image">
+            <img src="{{ block.settings.image | img_url: "master" }}" loading="lazy" alt="announcement"> 
+            <span>{{ block.settings.text}}</span>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>                    
+ 
+{% schema %}
+{
+  "name": "Announcement top bar",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Background",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Color",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "image",
+       "type": "image",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+         {
+           "type": "text",
+           "id": "text",
+           "label": "text"
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": "Announcement top bar"
+    }
+  ]
+}
+{% endschema %}

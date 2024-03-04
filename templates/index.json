@@ -1,0 +1,919 @@
+{
+  "sections": {
+    "1764c692-5f94-4554-add4-2e1f11e39562": {
+      "type": "Home-top-Banner",
+      "settings": {
+        "imagedext": "shopify:\/\/shop_images\/Group_48097442.png",
+        "imagemob": "shopify:\/\/shop_images\/Group_48097443.png",
+        "head": "AUSTRALIA'S DINING CHAIR SPECIALISTS",
+        "text-1": "5 Year Warranty",
+        "text-2": "Regular Wear & Tear Coverage",
+        "text-3": "Quality Money Back Guarantee",
+        "icon": "shopify:\/\/shop_images\/Group_164445.png",
+        "shoplink": "SHOP DINING CHAIRS NOW→",
+        "link": "shopify:\/\/collections\/all-dining-chairs",
+        "imagebank": "shopify:\/\/shop_images\/image_12.png"
+      }
+    },
+    "9e69f4fb-3367-4a9a-ac14-b772a7438ac2": {
+      "type": "info-list",
+      "blocks": {
+        "f5cc183e-9442-46b9-9fb7-68405086920a": {
+          "type": "image",
+          "settings": {
+            "text": "<p>LEATHER<\/p><p>DINING CHAIRS<\/p>",
+            "link": "shopify:\/\/collections\/leather-dining-chairs-australia"
+          }
+        },
+        "a33ee565-339a-48d8-91c2-bbcc7cb0edd6": {
+          "type": "image",
+          "settings": {
+            "text": "<p>WOODEN<\/p><p>DINNING CHAIRS<\/p>",
+            "link": "shopify:\/\/collections\/wooden-dining-chairs"
+          }
+        },
+        "bce90dab-c552-43bc-802e-a771086c4371": {
+          "type": "image",
+          "settings": {
+            "text": "<p>VELVET<\/p><p>DINNING CHAIRS<\/p>",
+            "link": "shopify:\/\/collections\/velvet-dining-chairs"
+          }
+        },
+        "4de35c57-4591-4f02-9029-6db1c959b68d": {
+          "type": "image",
+          "settings": {
+            "text": "<p>UPHOLSTERED<\/p><p>DINNING CHAIRS<\/p>",
+            "link": "shopify:\/\/collections\/upholstered-dining-chairs"
+          }
+        },
+        "022d3f14-1def-4647-8c86-4283a4aecb6e": {
+          "type": "image",
+          "settings": {
+            "text": "<p>RATTAN<\/p><p>DINNING CHAIRS<\/p>",
+            "link": "shopify:\/\/collections\/rattan-arm-chair"
+          }
+        },
+        "e44ee919-79ea-4a00-8f30-282a0dd27d14": {
+          "type": "image",
+          "settings": {
+            "text": "<p>METAL<\/p><p>DINNING CHAIRS<\/p>",
+            "link": "shopify:\/\/collections\/metal-dining-chairs"
+          }
+        }
+      },
+      "block_order": [
+        "f5cc183e-9442-46b9-9fb7-68405086920a",
+        "a33ee565-339a-48d8-91c2-bbcc7cb0edd6",
+        "bce90dab-c552-43bc-802e-a771086c4371",
+        "4de35c57-4591-4f02-9029-6db1c959b68d",
+        "022d3f14-1def-4647-8c86-4283a4aecb6e",
+        "e44ee919-79ea-4a00-8f30-282a0dd27d14"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Ora_Organic_-_The_Ultimate_Plant-based_Nutrition_Company-4_474a8e27-d785-4947-adc4-a370e54ef4dc.png"
+      }
+    },
+    "1d77df21-8013-4672-9347-51f6c73d0e3d": {
+      "type": "custom-feature",
+      "blocks": {
+        "b251f484-080e-4602-be76-ebdb6c452202": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Houz.png"
+          }
+        },
+        "192a6280-1585-4d72-836d-58612b84a346": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/House_Muse.png"
+          }
+        },
+        "259888ef-6182-43ba-81f3-3af84a927640": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/female.png"
+          }
+        },
+        "86b43c58-0b8c-4c62-baca-66260a3a2c88": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Top_inspired.png"
+          }
+        },
+        "4905776e-ed12-468a-b019-81164d9d10de": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kravelv.png"
+          }
+        },
+        "bc4ae981-702b-4fb6-b14d-908176aa19a1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Design_like.png"
+          }
+        },
+        "4788bed9-4a83-4666-9104-639bc68fd315": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dreamland_estate.png"
+          }
+        },
+        "857c0ba2-5a68-40de-91e3-4dfa7ea846fb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beautiful_touches.png"
+          }
+        }
+      },
+      "block_order": [
+        "b251f484-080e-4602-be76-ebdb6c452202",
+        "192a6280-1585-4d72-836d-58612b84a346",
+        "259888ef-6182-43ba-81f3-3af84a927640",
+        "86b43c58-0b8c-4c62-baca-66260a3a2c88",
+        "4905776e-ed12-468a-b019-81164d9d10de",
+        "bc4ae981-702b-4fb6-b14d-908176aa19a1",
+        "4788bed9-4a83-4666-9104-639bc68fd315",
+        "857c0ba2-5a68-40de-91e3-4dfa7ea846fb"
+      ],
+      "settings": {
+        "head": "AS FEATURED IN"
+      }
+    },
+    "723a7bf7-d8bb-4259-9d97-bf81fef54369": {
+      "type": "Brand-logo-list",
+      "blocks": {
+        "54c6646b-0ecc-4d79-ba90-d59fa35a983b": {
+          "type": "image",
+          "settings": {
+            "text": "5 Year Warranty",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164457.png"
+          }
+        },
+        "d8093d9a-1717-46dd-bb97-1dc045cf33e9": {
+          "type": "image",
+          "settings": {
+            "text": "Regular Wear &amp; Tear Coverage",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99320_63251ff4-598c-4e72-9cd9-989c1b3daced.png"
+          }
+        },
+        "d18673ab-b0a1-4b97-9fab-e2e03e25f97c": {
+          "type": "image",
+          "settings": {
+            "text": "Quality Money Back\nGuarantee",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164458_fb8b8737-914a-4eab-a72a-5dc49ae56905.png"
+          }
+        },
+        "dd1b9ddf-1488-454d-877f-f2894e4f51b9": {
+          "type": "image",
+          "settings": {
+            "text": "150+ 5 Star Reviews",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_98200c14-3118-4b6e-9eb1-a45a643283e9.png"
+          }
+        },
+        "44e552fd-ade2-4ece-a0e6-a76588513854": {
+          "type": "image",
+          "settings": {
+            "text": "0% Interest Free",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_1.png"
+          }
+        },
+        "3a304ec0-58c7-445b-a367-83812ef686c3": {
+          "type": "image",
+          "settings": {
+            "text": "Designed In Australia",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "54c6646b-0ecc-4d79-ba90-d59fa35a983b",
+        "d8093d9a-1717-46dd-bb97-1dc045cf33e9",
+        "d18673ab-b0a1-4b97-9fab-e2e03e25f97c",
+        "dd1b9ddf-1488-454d-877f-f2894e4f51b9",
+        "44e552fd-ade2-4ece-a0e6-a76588513854",
+        "3a304ec0-58c7-445b-a367-83812ef686c3"
+      ],
+      "settings": {
+        "bg-color": "#ececec",
+        "color": "#000000"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "OUR CUSTOMER FAVOURITES",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "arm-chair",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-2",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "2bf7d622-e620-4d1d-96d7-680834170f1f": {
+      "type": "custom-multicolumn",
+      "blocks": {
+        "template--16197792071849__2bf7d622-e620-4d1d-96d7-680834170f1f-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164471.png",
+            "title": "Pick Your Furniture From\n\"Only Dining Chairs\"",
+            "text": "<p>We have a large array of dining furniture to suit your dining room decor<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16197792071849__2bf7d622-e620-4d1d-96d7-680834170f1f-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_165162.png",
+            "title": "We'll Send Them In A Couple \nOf Business Days",
+            "text": "<p>As soon as we receive your order, we will begin to prepare and pack your furniture<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16197792071849__2bf7d622-e620-4d1d-96d7-680834170f1f-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_165161.png",
+            "title": "Revamp Dining From Chore \nTo Delightful Experience!",
+            "text": "<p>Get back to those comfortable and amazing meal times with family and friends<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16197792071849__2bf7d622-e620-4d1d-96d7-680834170f1f-column-1",
+        "template--16197792071849__2bf7d622-e620-4d1d-96d7-680834170f1f-column-2",
+        "template--16197792071849__2bf7d622-e620-4d1d-96d7-680834170f1f-column-3"
+      ],
+      "settings": {
+        "bg-style": true,
+        "title": "REVAMP YOUR DINING EXPERIENCE  <br> WITH JUST 3 EASY STEPS!",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3d008ff4-bf09-4670-884f-3cddc3e82f0d",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "d9f5c479-ccfb-4b21-ba1f-9b8b4f069dcb": {
+      "type": "chair-style",
+      "blocks": {
+        "cb590551-d467-4987-a415-ec2f5d7e46bd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_48097383_2.png",
+            "sub-head": "Best Leather Dining Chairs",
+            "head-3": "Shop The Collection →",
+            "link-list": "shopify:\/\/collections\/leather-dining-chairs-australia"
+          }
+        },
+        "78e79e7e-74f4-4e5f-8fc6-15bb53548453": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_48097454.png",
+            "sub-head": "Best Wooden Dining Chairs",
+            "head-3": "Shop The Collection →",
+            "link-list": "shopify:\/\/collections\/wooden-dining-chairs"
+          }
+        },
+        "4849580f-c6b1-41be-976a-c4a5bf315d2f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_48097455.png",
+            "sub-head": "All Bar Stools",
+            "head-3": "Shop The Collection →",
+            "link-list": "shopify:\/\/collections\/all-bar-stools"
+          }
+        },
+        "de00edbb-3650-4504-b3af-471e605eca42": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_48097453.png",
+            "sub-head": "All Dining Tables",
+            "head-3": "Shop The Collection →",
+            "link-list": "shopify:\/\/collections\/all-dining-chairs"
+          }
+        }
+      },
+      "block_order": [
+        "cb590551-d467-4987-a415-ec2f5d7e46bd",
+        "78e79e7e-74f4-4e5f-8fc6-15bb53548453",
+        "4849580f-c6b1-41be-976a-c4a5bf315d2f",
+        "de00edbb-3650-4504-b3af-471e605eca42"
+      ],
+      "settings": {
+        "head": "CHOOSE FROM OUR DINING CHAIR STYLES"
+      }
+    },
+    "e5b676ce-d71d-4fc7-affa-a6446d459be8": {
+      "type": "Testimonials-slider",
+      "blocks": {
+        "e7e57962-c3a1-4297-b407-c28ff62e461a": {
+          "type": "image",
+          "settings": {
+            "image-1": "shopify:\/\/shop_images\/Group_48097438_1.png",
+            "head": "TESTIMONIALS FROM HAPPY CUSTOMERS",
+            "image-2": "shopify:\/\/shop_images\/Group_164470.png",
+            "sub-head": "\"Personalized Experience\"",
+            "para": "<p>It was the customer service that really sets \"ONLY DINING CHAIRS\"  apart. Shane was so helpful with organizing delivery and providing regular updates. I haven't experienced such a personalized experience with other online retailers.<\/p>",
+            "name": "<span class=\"gold\">RAEGAN L.<\/span><span> (Verified Buyer)<\/span>"
+          }
+        },
+        "33583773-fdae-41e2-b06a-8035793609d1": {
+          "type": "image",
+          "settings": {
+            "image-1": "shopify:\/\/shop_images\/Group_48097440_2.png",
+            "head": "TESTIMONIALS FROM HAPPY CUSTOMERS",
+            "image-2": "shopify:\/\/shop_images\/Group_164470_a4089ec0-0ad2-4381-b344-ae3a9f333380.png",
+            "sub-head": "Lovely chairs & great customer support",
+            "para": "<p>The company kept me up to date on the delivery details and were very helpful. The chairs arrived within a few days of ordering, which is great when you want everything yesterday! Highly recommend this company and very happy with my purchase!<\/p>",
+            "name": "<span class=\"gold\">Michele C.<\/span><span> (Verified Buyer)<\/span>"
+          }
+        },
+        "1a3399ef-82e6-4508-82b9-9032ecf65a47": {
+          "type": "image",
+          "settings": {
+            "image-1": "shopify:\/\/shop_images\/Group_48097439_2.png",
+            "head": "TESTIMONIALS FROM HAPPY CUSTOMERS",
+            "image-2": "shopify:\/\/shop_images\/Group_164470_a4089ec0-0ad2-4381-b344-ae3a9f333380.png",
+            "sub-head": "Best Experience",
+            "para": "<p>Communication was very fast and efficient. Lovely to deal with, with fast and easy payment and quick postage. I love my chairs they are exactly as shown in the advertisement and very comfy. Would highly recommend purchasing from this company.<\/p>",
+            "name": "<span class=\"gold\">Claire C.<\/span><span> (Verified Buyer)<\/span>"
+          }
+        }
+      },
+      "block_order": [
+        "e7e57962-c3a1-4297-b407-c28ff62e461a",
+        "33583773-fdae-41e2-b06a-8035793609d1",
+        "1a3399ef-82e6-4508-82b9-9032ecf65a47"
+      ],
+      "settings": {
+        "bg": "#ebebeb",
+        "color": "#000000"
+      }
+    },
+    "2dcbd791-8cb9-4887-a415-943db17c2188": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16197792071849__2dcbd791-8cb9-4887-a415-943db17c2188-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHY \"ONLY DINING CHAIRS\" ARE DIFFERENT?",
+            "heading_size": "h1"
+          }
+        },
+        "template--16197792071849__2dcbd791-8cb9-4887-a415-943db17c2188-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe in the quality of our products, which is why, unlike other furniture retailers, we offer exclusive <strong>5 year warranties for chairs, bar stools and tables<\/strong> in residential settings. We feel that we would be doing a “dis service” to the Australian public if we didn’t stand by our products and give you a 5 year warranty when most furniture retailers will only give you 1 to 2 years. Not to mention we offer regular wear and tear coverage on all chairs and bar stools which is a first for any Australia retailer. If you are dissatisfied with what you receive (though we doubt it!), we’ll give you a <strong>full refund<\/strong> - no questions asked.<\/p>"
+          }
+        },
+        "template--16197792071849__2dcbd791-8cb9-4887-a415-943db17c2188-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP DINING CHAIRS NOW →",
+            "button_link": "shopify:\/\/collections\/all-dining-chairs",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16197792071849__2dcbd791-8cb9-4887-a415-943db17c2188-heading-1",
+        "template--16197792071849__2dcbd791-8cb9-4887-a415-943db17c2188-text-1",
+        "template--16197792071849__2dcbd791-8cb9-4887-a415-943db17c2188-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 60,
+        "padding_bottom": 48
+      }
+    },
+    "de7c347c-1762-459a-b2ba-df7ce74a00a8": {
+      "type": "Brand-logo-list",
+      "blocks": {
+        "ab0837f7-ea32-459f-9ae0-287dfa3899ed": {
+          "type": "image",
+          "settings": {
+            "text": "5 Year Warranty",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164457.png"
+          }
+        },
+        "2649b7d5-f7c5-4770-b606-a72956560d58": {
+          "type": "image",
+          "settings": {
+            "text": "Regular Wear &amp; Tear\nCoverage",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99320_63251ff4-598c-4e72-9cd9-989c1b3daced.png"
+          }
+        },
+        "a248820c-134b-4bd3-a529-cdffcfc9c3e0": {
+          "type": "image",
+          "settings": {
+            "text": "Quality Money Back\nGuarantee",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164458_fb8b8737-914a-4eab-a72a-5dc49ae56905.png"
+          }
+        },
+        "a5f67e21-87eb-41a3-a8c2-870bf326f22b": {
+          "type": "image",
+          "settings": {
+            "text": "150+ 5 Star Reviews",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_98200c14-3118-4b6e-9eb1-a45a643283e9.png"
+          }
+        },
+        "97870987-da9b-411a-bb75-4a512d9787d4": {
+          "type": "image",
+          "settings": {
+            "text": "0% Interest Free",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_1.png"
+          }
+        },
+        "ea43050f-ddcd-46fe-a3f9-eb1b8f64af80": {
+          "type": "image",
+          "settings": {
+            "text": "Designed In Australia",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "ab0837f7-ea32-459f-9ae0-287dfa3899ed",
+        "2649b7d5-f7c5-4770-b606-a72956560d58",
+        "a248820c-134b-4bd3-a529-cdffcfc9c3e0",
+        "a5f67e21-87eb-41a3-a8c2-870bf326f22b",
+        "97870987-da9b-411a-bb75-4a512d9787d4",
+        "ea43050f-ddcd-46fe-a3f9-eb1b8f64af80"
+      ],
+      "settings": {
+        "bg-color": "#ececec",
+        "color": "#000000"
+      }
+    },
+    "77e2d58c-b86a-4b56-80a7-150c8135e4f7": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16197792071849__77e2d58c-b86a-4b56-80a7-150c8135e4f7-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "WE BLEND DESIGNS, FUNCTIONS, MATERIALS AND COLORS TO CREATE HARMONIOUS LIFE...",
+            "heading_size": "h1"
+          }
+        },
+        "template--16197792071849__77e2d58c-b86a-4b56-80a7-150c8135e4f7-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Only Dining Chairs, we believe that by directing our energy into one room and making it fantastic, that you have a better chance of achieving it.<\/p><p>Our products are defined by style, comfort & quality - you can expect all three elements with every purchase.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16197792071849__77e2d58c-b86a-4b56-80a7-150c8135e4f7-heading-1",
+        "template--16197792071849__77e2d58c-b86a-4b56-80a7-150c8135e4f7-text-1"
+      ],
+      "settings": {
+        "main-title": "",
+        "review": true,
+        "image": "shopify:\/\/shop_images\/image_7_b7f34c3f-e1e1-4912-abd9-05f8a60f6b69.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "ab5ac63a-4062-4d1e-99fa-b62d3be73231": {
+      "type": "chair-info",
+      "settings": {
+        "bg-img-dext": "shopify:\/\/shop_images\/Group_48097444_1.png",
+        "bg-img-mob": "shopify:\/\/shop_images\/Group_48097444_2.png",
+        "title": "TRANSFORM YOUR DINING EXPERIENCE",
+        "details": "<ul>\n<li>Only Dining Chairs prides itself on not only supplying quality furniture<br>\nbut being there for you well after the sale has taken place. <\/li>\n\n<li>Our team of experts are committed to finding and selling only the<br>\nbest quality furniture for your dining room and for all price ranges.<\/li> \n\n<li>Our customer service is second to none so reach out at any time<br>\nknowing your email will be responded to in a timely manner!<\/li>\n<\/ul>",
+        "btn": "SHOP DINING CHAIRS NOW →",
+        "link": "shopify:\/\/collections\/all-dining-chairs",
+        "btn-radius": 0,
+        "btn-bg": "#ebb64a",
+        "btn-color": "#000000",
+        "btn-border": "#ebb64a"
+      }
+    },
+    "5e193b30-a3ed-4306-8159-d9c28285b315": {
+      "type": "image-banner",
+      "settings": {
+        "title": "BEST DEAL, BETTER CHOICE",
+        "image": "shopify:\/\/shop_images\/Group_48097450.png",
+        "image-mb": "shopify:\/\/shop_images\/Group_48097449_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "effc0479-5b4c-466d-9f58-622f03e0afbc": {
+      "type": "Brand-logo-list",
+      "blocks": {
+        "31bc88cb-100f-4861-b59e-9e867c912246": {
+          "type": "image",
+          "settings": {
+            "text": "5 Year Warranty",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164457.png"
+          }
+        },
+        "89216c00-85ed-4fb8-9f8e-7cce99808ee2": {
+          "type": "image",
+          "settings": {
+            "text": "Regular Wear &amp; Tear\nCoverage",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99320_63251ff4-598c-4e72-9cd9-989c1b3daced.png"
+          }
+        },
+        "47538979-0719-47a1-904b-735f2fc5d0b0": {
+          "type": "image",
+          "settings": {
+            "text": "Quality Money Back\nGuarantee",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164458_fb8b8737-914a-4eab-a72a-5dc49ae56905.png"
+          }
+        },
+        "97fbc5a2-ad79-4425-bfd1-021b75db0f25": {
+          "type": "image",
+          "settings": {
+            "text": "150+ 5 Star Reviews",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_98200c14-3118-4b6e-9eb1-a45a643283e9.png"
+          }
+        },
+        "d32fd104-19ec-4b1b-8883-1e5ef81605df": {
+          "type": "image",
+          "settings": {
+            "text": "0% Interest Free",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_1.png"
+          }
+        },
+        "35ac1b3c-a98f-4f3b-af84-1f63e2d6d38f": {
+          "type": "image",
+          "settings": {
+            "text": "Designed In Australia",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "31bc88cb-100f-4861-b59e-9e867c912246",
+        "89216c00-85ed-4fb8-9f8e-7cce99808ee2",
+        "47538979-0719-47a1-904b-735f2fc5d0b0",
+        "97fbc5a2-ad79-4425-bfd1-021b75db0f25",
+        "d32fd104-19ec-4b1b-8883-1e5ef81605df",
+        "35ac1b3c-a98f-4f3b-af84-1f63e2d6d38f"
+      ],
+      "settings": {
+        "bg-color": "#ececec",
+        "color": "#000000"
+      }
+    },
+    "1700228954831380c0": {
+      "type": "apps",
+      "blocks": {
+        "cab6e541-c744-4ab3-a1ed-545da3154cc5": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "cab6e541-c744-4ab3-a1ed-545da3154cc5"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "dd9065db-f9b6-4cfb-87b6-ddc016e27138": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16197792071849__dd9065db-f9b6-4cfb-87b6-ddc016e27138-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Only Dining Chairs, we understand the importance of having comfortable and stylish seating options for your dining room. That's why we offer a fabulous range of Australian dining chairs that come in <a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/dining-chairs-set-of-4\">sets of 4<\/a> and <a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/dining-chairs-set-of-6\"> set of 6<\/a> to fit your needs perfectly. <\/p><p>They are durable, stylish and affordable, the abundance of benefits make our online dining chairs collection worth investing in. Some of our top-selling dining chairs categories include mid-century, Scandinavian, contemporary, modern and leather dining chairs<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16197792071849__dd9065db-f9b6-4cfb-87b6-ddc016e27138-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "READ MORE",
+            "button_link": "shopify:\/\/collections\/all-dining-chairs",
+            "button_style_secondary": false
+          }
+        },
+        "fa12051f-2b21-4065-a939-5c5d3c9dd426": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our <a href=\"https:\/\/www.onlydiningchairs.com.au\/\">dining chairs<\/a> promise utmost comfort with great styles making them perfect for every occasion; mix & match with your dining table. Rustic, traditional, modern or retro, we have styles that you’ll love. <\/p><p>So, why think or rethink, shop high-quality dining chairs for sale with us. We offer amazing deals & discounts on bulk orders. Get <a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/dining-chairs-sydney\">dining chairs in Sydney<\/a>, <a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/dining-chairs-melbourne\">dining chairs in Melbourne<\/a>, <a href=\"https:\/\/www.onlydiningchairs.com.au\/?_ab=0&_fd=0&_sc=1\">dining chairs in Perth, <\/a><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/dining-chairs-adelaide\">dining chairs in Adelaide <\/a> and many other parts of Australia. Our premium-quality <a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/wooden-dining-chairs\">wooden dining chairs <\/a>are designed to pair with your wooden dining table. Whatever style you pick, we assure you of the finest-quality craftsmanship & design, as well as quality materials.<\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/leather-dining-chairs\">Leather dining chairs <\/a>are comfortable and made up of premium quality materials to make them durable for everyday use. Leather chairs are rich in look with a subtle <br\/>sophisticated appearance and it effortlessly enhances the sleekness of your dining area.<\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/grey-dining-chairs\">Grey dining chairs <\/a>will improve the aesthetic outlook of your dining space by a notable <br\/>margin through their simple yet elegant appearance. The grey chairs come in different shades, designs, fabrics and materials. <\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/outdoor-dining-chairs-australia\">Outdoor dining chairs <\/a>give the user unique features and comfort in seating which create an amazing outdoor dining experience. We offer a broad range of outdoor chairs which you can purchase. But, you must be aware of certain key elements before making that purchase.<\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/oak-dining-chairs\">Oak dining chairs <\/a>are durable, resilient and made of very high and premium quality oak <br\/>wood. The polishing that has been done on this oak dining chairs gives them an aesthetic glossy look and the chairs are super comfortable.<\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/modern-dining-chairs\">Modern dining chairs<\/a> have a modernistic design and are manufactured with excellence and engineered to fit the new age home interior. Due to it's different types, fabric and colors, they are one of the finest and most amazing <br\/>dining chairs that will surely give your dining room a classy modern look.<\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/wooden-dining-chairs\">Wooden dining chairs<\/a> are a classic and timeless choice for any dining room. They come in a variety of styles and finishes, from sleek and modern to warm and traditional. Wooden dining chairs are durable and can withstand heavy use. They can also be easily refinished or painted to match any decor. <br\/>They are often paired with wooden dining tables for a cohesive look. Many wooden dining chairs are also designed with comfort in mind.<\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/white-dining-chairs\">White dining chairs<\/a> and <a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/black-dining-chairs-australia\">Black dining chairs<\/a> always appear to be an elegant and trendy addition to your dining room. The benefit of choosing white and black dining chairs is that they will always offer a beautiful, stylish visual experience with an added sense of lightness and purity. White and black chairs are special attention to your dining room decor.<\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/french-provincial-dining-chairs\">French Provincial dining chairs<\/a> are characterized by their elegant and ornate design, typically featuring detailed carvings, scrolled arms, and cabriole legs. They are often made of wood, such as oak or cherry, and can be painted or stained in a variety of finishes. They are a classic and timeless choice for any dining room.<\/p><p><a href=\"https:\/\/www.onlydiningchairs.com.au\/collections\/metal-dining-chairs\">Metal dining chairs<\/a> are trendy, comfortable and bestows a luxurious look to your living <br\/>room furniture. Metal chairs in different colors, styles and shapes are always a perfect fit for one's décor. Select one that complements the décor of your living space. <a href=\"https:\/\/www.onlydiningchairs.com.au\/blogs\/only-dining-chairs-blog\/antique-dining-chairs\">Antique dining chairs<\/a> are most certainly going to be an addition in your dining room that oozes class, elegance, and quality. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "ebfa4048-f135-414e-9584-c746df0e3dbe": {
+          "type": "button",
+          "settings": {
+            "button_label": "READ LESS",
+            "button_link": "shopify:\/\/collections\/all-dining-chairs",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16197792071849__dd9065db-f9b6-4cfb-87b6-ddc016e27138-text-1",
+        "template--16197792071849__dd9065db-f9b6-4cfb-87b6-ddc016e27138-button-1",
+        "fa12051f-2b21-4065-a939-5c5d3c9dd426",
+        "ebfa4048-f135-414e-9584-c746df0e3dbe"
+      ],
+      "settings": {
+        "main-title": "DINING CHAIRS AUSTRALIA",
+        "review": false,
+        "image": "shopify:\/\/shop_images\/Mixed_dining_chairs.webp",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-3d008ff4-bf09-4670-884f-3cddc3e82f0d",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16197792071849__0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "1. What is the estimated delivery time?",
+            "icon": "none",
+            "row_content": "<p>It depends upon the city where you want the order to be delivered.<\/p><p>The estimated delivery time frames are:<\/p><p>For VIC, approximately 3 - 5 working days;<\/p><p>For NSW, SA, ACT, approximately 4 - 8 working days;<\/p><p>For QLD, NT,WA and TAS, approximately 7 - 10 working days.<\/p><p>We’ll let you know the tentative delivery date when you place your order in the order confirmation email.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16197792071849__0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2. Is there any first-time customer discount?",
+            "icon": "none",
+            "row_content": "<p>Yes, use coupon code “NEW5” at checkout for 5% off your entire order!<\/p>",
+            "page": ""
+          }
+        },
+        "template--16197792071849__0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "3. How can I place a bulk order?",
+            "icon": "none",
+            "row_content": "<p>If you want a special quote for bulk purchase dining chairs in Australia, reach out to our customer support team at <a href=\"mailto:support@onlydiningchairs.com.au\">support@onlydiningchairs.com.au<\/a> with the following information:-<\/p><ul><li>Product name<\/li><li>Colour if applicable<\/li><li>How many you need<\/li><li>Delivery postcode<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "template--16197792071849__0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "4. What are the payment options which you provide?",
+            "icon": "none",
+            "row_content": "<p>We offer multiple payment options including all credit cards, Paypal, Apple Pay, Gpay, Afterpay, Humm and Latitude Pay amongst others.<\/p>",
+            "page": ""
+          }
+        },
+        "e67db612-81b8-49a0-bd2d-b09c66723561": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "5. Do you sell second hand dining chairs?",
+            "icon": "none",
+            "row_content": "<p>No, we don’t sell second hand dining chairs.<\/p>",
+            "page": ""
+          }
+        },
+        "41ded6d9-edba-4622-96bf-6fffa1e50e07": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "6. Do you provide warranty of dining chairs?",
+            "icon": "none",
+            "row_content": "<p>Yes we provide 5 year warranty on dining chairs and also on all our other products.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16197792071849__0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8-collapsible_row-1",
+        "template--16197792071849__0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8-collapsible_row-2",
+        "template--16197792071849__0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8-collapsible_row-3",
+        "template--16197792071849__0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8-collapsible_row-4",
+        "e67db612-81b8-49a0-bd2d-b09c66723561",
+        "41ded6d9-edba-4622-96bf-6fffa1e50e07"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "YOU GOT QUESTIONS? WE GOT YOUR ANSWERS!",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "btn-text": "ASK YOUR QUESTION →",
+        "btn-link": "shopify:\/\/pages\/contact-us",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5fc203c6-8772-4c22-8676-dc76a1d02932": {
+      "type": "Daining-room",
+      "blocks": {
+        "c9b4479e-2a71-4657-8a59-108b18530631": {
+          "type": "heading",
+          "settings": {
+            "heading": "WE BRING TO YOU A FABULOUS RANGE OF AUSTRALIAN DINING ROOM CHAIRS THAT COMPLEMENT CONSERVATIVE TO ECLECTIC INTERIOR DECOR.",
+            "heading_size": "h1"
+          }
+        },
+        "template--16197792071849__5fc203c6-8772-4c22-8676-dc76a1d02932-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP DINING CHAIRS NOW→",
+            "button_link": "shopify:\/\/collections\/all-dining-chairs",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "imagebank": "shopify:\/\/shop_images\/desktop_badges_HD_6a147d43-2478-457c-a1ab-a6bf0b723a29.png"
+          }
+        }
+      },
+      "block_order": [
+        "c9b4479e-2a71-4657-8a59-108b18530631",
+        "template--16197792071849__5fc203c6-8772-4c22-8676-dc76a1d02932-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-b8625257-6a46-482d-b4fd-61e3276cce66",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "2231072f-158e-4f21-8a6b-e6072ccbb876": {
+      "type": "Brand-logo-list",
+      "blocks": {
+        "a1535221-b8b4-49d2-aaea-1f7a75e42ffe": {
+          "type": "image",
+          "settings": {
+            "text": "5 Year Warranty",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164457.png"
+          }
+        },
+        "24f94f33-4ed3-4d2d-91ef-a1fa9693ae01": {
+          "type": "image",
+          "settings": {
+            "text": "Regular Wear &amp; Tear\nCoverage",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99320_63251ff4-598c-4e72-9cd9-989c1b3daced.png"
+          }
+        },
+        "9e9d4beb-ed8c-4d5f-b474-dcbe60341ab8": {
+          "type": "image",
+          "settings": {
+            "text": "Quality Money Back\nGuarantee",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_164458_fb8b8737-914a-4eab-a72a-5dc49ae56905.png"
+          }
+        },
+        "17432fb2-14d4-4c5c-893e-e9183a40a8a1": {
+          "type": "image",
+          "settings": {
+            "text": "150+ 5 Star Reviews",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_98200c14-3118-4b6e-9eb1-a45a643283e9.png"
+          }
+        },
+        "0f0ecba6-8bf1-43f0-b0d7-e862030c58f2": {
+          "type": "image",
+          "settings": {
+            "text": "0% Interest Free",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_1.png"
+          }
+        },
+        "2fb74229-7e3d-4f94-959c-d2f463b5d199": {
+          "type": "image",
+          "settings": {
+            "text": "Designed In Australia",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/Group_99323_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "a1535221-b8b4-49d2-aaea-1f7a75e42ffe",
+        "24f94f33-4ed3-4d2d-91ef-a1fa9693ae01",
+        "9e9d4beb-ed8c-4d5f-b474-dcbe60341ab8",
+        "17432fb2-14d4-4c5c-893e-e9183a40a8a1",
+        "0f0ecba6-8bf1-43f0-b0d7-e862030c58f2",
+        "2fb74229-7e3d-4f94-959c-d2f463b5d199"
+      ],
+      "settings": {
+        "bg-color": "#ececec",
+        "color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "1764c692-5f94-4554-add4-2e1f11e39562",
+    "9e69f4fb-3367-4a9a-ac14-b772a7438ac2",
+    "1d77df21-8013-4672-9347-51f6c73d0e3d",
+    "723a7bf7-d8bb-4259-9d97-bf81fef54369",
+    "featured_collection",
+    "2bf7d622-e620-4d1d-96d7-680834170f1f",
+    "d9f5c479-ccfb-4b21-ba1f-9b8b4f069dcb",
+    "e5b676ce-d71d-4fc7-affa-a6446d459be8",
+    "2dcbd791-8cb9-4887-a415-943db17c2188",
+    "de7c347c-1762-459a-b2ba-df7ce74a00a8",
+    "77e2d58c-b86a-4b56-80a7-150c8135e4f7",
+    "ab5ac63a-4062-4d1e-99fa-b62d3be73231",
+    "5e193b30-a3ed-4306-8159-d9c28285b315",
+    "effc0479-5b4c-466d-9f58-622f03e0afbc",
+    "1700228954831380c0",
+    "dd9065db-f9b6-4cfb-87b6-ddc016e27138",
+    "0e1aa6ac-21a6-4b2e-baf1-a46ef734d5c8",
+    "5fc203c6-8772-4c22-8676-dc76a1d02932",
+    "2231072f-158e-4f21-8a6b-e6072ccbb876"
+  ]
+}

@@ -1,0 +1,213 @@
+<style>
+  img.image-dext-top.desktop, img.image-mob.mobile {
+    width: 100%;
+}
+section.Australias-Premium-Dining {
+    position: relative;
+}
+.inner-contant * {
+  color: white;
+}
+.Australias-Premium-Dining .inner-contant {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    left: 9%;
+}
+.Australias-Premium-Dining h1.head-titel {
+    margin: 0;
+    font-weight: bold;
+    font-size:40px;
+    line-height: 1.3;
+}
+.Australias-Premium-Dining ul{
+    margin: 0rem 0;
+    letter-spacing: 0;
+    list-style-type: none;
+    padding-left: 0;
+ } 
+.Australias-Premium-Dining li {
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+  padding-left: 2.1rem;
+}
+{% if section.settings.icon != blank %}  
+.Australias-Premium-Dining li:before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url('{{ section.settings.icon.src | img_url: 'master' }}');
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 13px;
+    background-size: 13px;
+}
+{% endif %}
+.Australias-Premium-Dining .wp_main-details {
+    margin-top: 10px;
+}
+.Australias-Premium-Dining .shop-link {
+    margin-top: 20px;
+}
+.Australias-Premium-Dining .shop-link a {
+  color: #000;
+}
+.Australias-Premium-Dining .review-image > svg path:not([fill-rule="evenodd"]) {
+  fill: white;
+}
+.Australias-Premium-Dining .custom-reviews {
+  margin: 1.5rem 0 2rem;
+}
+
+@media(min-width: 1600px){
+  .Australias-Premium-Dining .inner-contant {
+    top: 42%;
+  }
+}
+
+@media(max-width: 1199px){
+    .Australias-Premium-Dining .inner-contant {
+      width: 90%;
+  }
+  .Australias-Premium-Dining h1.head-titel {
+      font-size: 3rem;
+  }
+}
+  
+@media (max-width:1024px){
+    .Australias-Premium-Dining h1.head-titel {
+      font-size: 1.8rem;
+  }
+  .Australias-Premium-Dining .wp_main-details {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+  }
+  .Australias-Premium-Dining .shop-link {
+    margin-top: 15px;
+  }
+  .Australias-Premium-Dining li {
+    font-size: 13px;
+  }
+  .Australias-Premium-Dining .shop-link a {
+    height: 43px;
+    width: 225px;
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 767px){
+  .Australias-Premium-Dining .inner-contant {
+    width: 100%;
+    left: 0;
+    padding: 3.3rem;
+}
+.Australias-Premium-Dining h1.head-titel {
+  font-size: 22px;
+}
+.Australias-Premium-Dining .wp_main-details {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.Australias-Premium-Dining li {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.payment.icons {
+  max-width: 85%;
+}
+}  
+</style>
+
+<section class="Australias-Premium-Dining">
+  <div class="main-img">
+    <img src="{{ section.settings.imagedext | img_url: "master" }}" loading="lazy" alt="image-dext-top" class="image-dext-top desktop"> 
+    <img src="{{ section.settings.imagemob | img_url: "master" }}" loading="lazy" alt="image-mob" class="image-mob mobile">
+    <div class="inner-contant">
+      <h1 class="head-titel">{{ section.settings.head }}</h1>
+      <div class="wp_main-details">
+        <ul>
+          <li>{{ section.settings.text-1 }}</li>
+          <li>{{ section.settings.text-2 }}</li>
+          <li>{{ section.settings.text-3 }}</li>
+        </ul>
+      </div>
+      <div class="shop-link">
+        <a class="custom-button" href="{{ section.settings.link }}">{{ section.settings.shoplink }}</a>
+      </div>
+
+      {% render 'review-widget' %}
+
+      <div class="payment icons">
+        <img src="{{ section.settings.imagebank | img_url: "master" }}" loading="lazy" alt="Payment">
+      </div>
+    </div>
+  </div>
+</section> 
+
+{% schema %}
+{
+  "name": "Australia's Premium",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "imagedext",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagemob",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "text-1",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "text-2",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "text-3",
+      "label": "Text"
+    },
+    {
+      "type":"image_picker",
+      "id":"icon",
+      "label":"Details Icon"
+    },
+    {
+      "type": "text",
+      "id": "shoplink",
+      "label": "Button Text"
+    },
+     {
+      "type": "url",
+      "id": "link",
+      "label": "Shop link"
+    },
+    {
+      "type":"image_picker",
+      "id":"imagebank",
+      "label":"Details Icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Australia's Premium",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %} 

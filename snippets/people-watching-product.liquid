@@ -1,0 +1,44 @@
+{% if section.settings.people-watching %}
+    <style>
+    .people-watching-product {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.9rem;
+        border-radius: 30px;
+        background: {{ section.settings.watching-bg }};
+        z-index: 2;
+        color: white;
+        padding: 0.2rem 1.2rem;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .people-watching-product img {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 0.8rem;
+    }
+    @media (max-width: 767px){
+        .people-watching-product {
+            font-size: 11px;
+            right: 0;
+        }
+    }
+    </style>
+
+    <div class="people-watching-product">
+        {% if section.settings.watching-image != blank %}
+            <img loading="lazy" alt="Watching Image" src="{{ section.settings.watching-image.src | img_url: 'master' }}">
+        {% endif %}
+        <span id="view-count"></span>
+    </div>
+
+    <script>
+        var minViews = {% if section.settings.watching-min != blank %}{{ section.settings.watching-min }}{% else %}15{% endif %};
+        var maxViews = {% if section.settings.watching-max != blank %}{{ section.settings.watching-max }}{% else %}30{% endif %};
+        var text = '{% if section.settings.watching-text != blank %}{{ section.settings.watching-text }}{% else %}People are viewing this item.{% endif %}';
+        var targetElement = document.getElementById("view-count");
+        targetElement.innerText = Math.floor(Math.random() * (maxViews - minViews) + minViews) + ' ' + text;
+    </script> 
+{% endif %}

@@ -1,0 +1,224 @@
+<style> 
+section.wp_home-image-with-text.for-days *{
+  color: #fff;
+} 
+section.wp_home-image-with-text.for-days .wp_image-block img {
+    width: 100%;
+}
+section.wp_home-image-with-text.for-days {
+    padding: 2rem 0 0rem;
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    position: relative;
+}
+section.wp_home-image-with-text ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+ul.wp_image-text-wrapper {
+    margin: 0;
+}
+.for-days-link {
+    padding-top: 2rem;
+}
+section.wp_home-image-with-text.for-days li.wp_main-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8%;
+}
+li.wp_main-text h3 {
+    font-size: 4.2rem;
+    margin: 0;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+}
+section.wp_home-image-with-text li.wp_main-text .wp_main-description {
+    max-width: 60rem;
+    margin-left: 0;
+}
+section.wp_home-image-with-text .wp_main-description {
+    max-width: 100%;
+        font-size: 1.4rem;
+    letter-spacing: 0;
+}
+section.wp_home-image-with-text .wp_main-details ul {
+    flex-direction: column;
+}
+section.wp_home-image-with-text.for-days .wp_main-details ul li {
+    font-size: 18px;
+    position: relative;
+    line-height: 1.6;
+    margin-bottom: 2.7rem;
+    padding-left: 17px;
+}
+section.wp_home-image-with-text.for-days .wp_main-details ul li:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 11px;
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+}
+a.wp_button.custom-button {
+    font-weight: 700;
+}
+.wp_trust-wrapper {
+    padding-left: 15rem;
+}
+section.wp_home-image-with-text .wp_trust-wrapper ul {
+    align-items: center;
+}
+section.wp_home-image-with-text ul li.trust-image {
+    margin-right: 3rem;
+}
+section.wp_home-image-with-text li.wp_trust-text.wp_main-description {
+    max-width: 60rem;
+}
+.wp_home-image-with-text.for-days img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wp_home-image-with-text.for-days .for-days-link img.link-btn {
+    width: 20%;
+}
+.wp_home-image-with-text.for-days li.wp_main-text h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 2.8rem;
+}
+section.wp_home-image-with-text.for-days * {
+    color: #000;
+}
+li.wp_main-text h3 {
+    font-size: 4.2rem;
+    margin: 0;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+}  
+
+@media(max-width:1199px){
+    .wp_home-image-with-text.for-days li.wp_main-text h3 {
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+    section.wp_home-image-with-text.for-days .wp_main-details ul li {
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+    section.wp_home-image-with-text.for-days .wp_main-details ul li:before {
+        top: 7px;
+    }
+    .for-days-link {
+        padding-top: 1rem;
+    }
+}
+
+@media(max-width: 768px){
+    section.wp_home-image-with-text.for-days li.wp_main-text {
+        position: unset;
+        transform: none;
+        padding: 2rem 3rem;
+    }
+}
+</style>
+
+<section {% if section.settings.bg != blank %}style="background:{{ section.settings.bg }};"{% endif %} class="wp_home-image-with-text for-days">
+    {% if section.settings.bg-img-dext != blank %}
+            <img class="desktop" src="{{ section.settings.bg-img-dext.src | img_url: 'master' }}" loading="lazy" alt="Main Banner">
+        {% endif %}
+        {% if section.settings.bg-img-mob != blank %}
+            <img class="mobile" src="{{ section.settings.bg-img-mob.src | img_url: 'master' }}" loading="lazy" alt="Main Banner">
+        {% endif %}
+    <ul class="wp_image-text-wrapper">
+        <li class="wp_main-text">
+            {% if section.settings.title != blank %}
+                <h3 class="wp_main-title">{{ section.settings.title }}</h3>
+            {% endif %} 
+            {% if section.settings.details != blank %}
+                <div class="wp_main-details">{{ section.settings.details }}</div>
+            {% endif %}
+            {% if section.settings.btn != blank %}
+            <div class="for-days-link">
+                <a style="background: {{ section.settings.btn-bg }}; color: {{ section.settings.btn-color }}; border: 1px solid {{ section.settings.btn-border }}; border-radius: {{ section.settings.btn-radius }}px;" aria-label="{{ section.settings.btn }}" class="wp_button custom-button" href="{{ section.settings.link }}">{{ section.settings.btn }}</a>
+            </div>
+            {% endif %}   
+        </li>
+    </ul>
+</section>
+
+{% schema %}
+{
+  "name": "Home Chair Info",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"bg-img-dext",
+      "label":"Background Image Desktop"
+    },
+    {
+      "type":"image_picker",
+      "id":"bg-img-mob",
+      "label":"Background Image Mobile"
+    },
+    {
+      "type":"html",
+      "id":"title",
+      "label":"Add Title"
+    },
+    {
+      "type":"html",
+      "id":"details",
+      "label":"Add details"
+    },
+    {
+      "type":"text",
+      "id":"btn",
+      "label":"Add Button Label",
+      "default": "SHOP NOW"
+    },
+    {
+      "type":"url",
+      "id":"link",
+      "label":"Add Button Link"
+    },
+    {
+        "type": "range",
+        "id": "btn-radius",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 10,
+        "label": "Set border radius in px"
+    },
+    {
+      "type":"color",
+      "id":"btn-bg",
+      "label":"Button Background Color",
+      "default": "#fff"
+    },
+    {
+      "type":"color",
+      "id":"btn-color",
+      "label":"Button Text Color",
+      "default": "rgba(249, 25, 79, 1)"
+    },
+    {
+      "type":"color",
+      "id":"btn-border",
+      "label":"Button border color",
+      "default": "#fff"
+    }
+  ],
+  "presets": [
+    {
+        "name": "Home Chair Info"
+    }
+  ]
+}
+{% endschema %} 

@@ -1,0 +1,139 @@
+<style>
+  .main-feature-list .main-head {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 2rem;
+} 
+.main-feature-list {
+    padding: 5rem;
+}
+.main-feature-list .swiper-slide {
+    width: 15%;
+    padding: 1.5rem;
+}
+
+@media(max-width: 767px){
+.main-feature-list .main-head {
+    font-size: 18px;
+} 
+.main-feature-list {
+    padding: 3.2rem 0;
+}
+.main-feature-list .swiper-custom-button.swiper-button-prev {
+    left: 43%;
+}
+.main-feature-list .swiper-custom-button {
+    width: 3.5rem;
+    height: 3.5rem;
+    top: auto;
+    bottom: 0rem;
+    transform: translateX(-50%);
+    left: 56%;
+}
+.main-feature-list .swiper-slide {
+    width: 42%;
+}
+.main-feature-list .swiper-wrapper {
+    padding-bottom: 2rem;
+}
+}
+
+</style>
+
+<div class="main-feature-list">
+    {% if section.settings.head != blank %}
+        <div class="main-head">{{ section.settings.head }}</div>
+    {% endif %}
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+        <div class="swiper-slide"><img loading="lazy" src="{{ block.settings.image | img_url: "master" }}" alt="" /></div>
+    {% endfor %}
+    </div>
+    <div class="swiper-custom-button swiper-button-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <g filter="url(#filter0_d_1_551)">
+            <path d="M22 3C25.1645 3 28.2579 3.93838 30.8891 5.69649C33.5203 7.45459 35.5711 9.95345 36.7821 12.8771C37.9931 15.8007 38.3099 19.0177 37.6926 22.1214C37.0752 25.2251 35.5513 28.0761 33.3137 30.3137C31.0761 32.5513 28.2251 34.0752 25.1214 34.6926C22.0177 35.3099 18.8007 34.9931 15.8771 33.7821C12.9534 32.5711 10.4546 30.5203 8.69649 27.8891C6.93838 25.2579 6 22.1645 6 19C6 14.7565 7.68571 10.6869 10.6863 7.68629C13.6869 4.68571 17.7565 3 22 3Z" fill="#BF892F"/>
+            </g>
+            <path d="M20.591 26.922C20.591 21.855 27.7 19.67 31.248 19.211C27.7 18.752 20.591 16.567 20.591 11.5M31.051 19.211H12.5" stroke="white" stroke-width="2"/>
+            <defs>
+            <filter id="filter0_d_1_551" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.161 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_551"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_551" result="shape"/>
+            </filter>
+            </defs>
+        </svg>
+    </div>
+    <div class="swiper-custom-button swiper-button-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <g filter="url(#filter0_d_1_555)">
+            <path d="M22 35C30.8366 35 38 27.8366 38 19C38 10.1634 30.8366 3 22 3C13.1634 3 6 10.1634 6 19C6 27.8366 13.1634 35 22 35Z" fill="#BF892F"/>
+            </g>
+            <path d="M23.409 26.922C23.409 21.855 16.304 19.67 12.752 19.211C16.304 18.752 23.409 16.567 23.409 11.5M12.952 19.211H31.5" stroke="white" stroke-width="2"/>
+            <defs>
+            <filter id="filter0_d_1_555" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.161 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_555"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_555" result="shape"/>
+            </filter>
+            </defs>
+        </svg>
+    </div>
+</div>
+</div>
+
+<script>
+    var swiper = new Swiper(".main-feature-list .mySwiper", {
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        }
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Feature List",
+  "settings": [
+     {
+      "type": "text",
+      "id": "head",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Feature List",
+       "type": "image",
+       "settings": [
+       
+   
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+         
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Feature List",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %} 

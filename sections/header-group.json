@@ -1,0 +1,104 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "26482fa3-0d7a-43f2-96dd-88d3b7b39cd3": {
+      "type": "announcement-bar",
+      "blocks": {
+        "sections--16197792465065__26482fa3-0d7a-43f2-96dd-88d3b7b39cd3-announcement-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "🎅 CHRISTMAS SALE | UP TO 60% OFF SELECTED FURNITURE | ENDS MIDNIGHT 10th dec 🎄",
+            "link": "shopify:\/\/collections\/sale"
+          }
+        }
+      },
+      "block_order": [
+        "sections--16197792465065__26482fa3-0d7a-43f2-96dd-88d3b7b39cd3-announcement-1"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "show_line_separator": false,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "15f0ab97-a448-448b-aece-d23047514736": {
+      "type": "custom-top-bar",
+      "blocks": {
+        "fdc13190-7896-432e-8d7a-e14ef03bbf86": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_99319_b23229ac-931a-4209-9ad6-c76a207c3ebe.png",
+            "text": "5 YEAR WARRANTY"
+          }
+        },
+        "50d84ec3-b4a9-48b6-8024-869948182ff7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_99320.png",
+            "text": "REGULAR WEAR & TEAR COVERAGE"
+          }
+        },
+        "030a5a5f-cc0c-4d66-b2f1-e8102b62a7f6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164456.png",
+            "text": "QUALITY MONEY BACK GUARANTEE"
+          }
+        },
+        "df055764-d68d-4d61-95c7-2bfd1fae7fe5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/call.png",
+            "text": "CALL US: 1300 303 764"
+          }
+        },
+        "cf19a794-1889-4ef5-a2bd-4c2b441dcdcc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/email.png",
+            "text": "support@onlydiningchairs.com.au"
+          }
+        }
+      },
+      "block_order": [
+        "fdc13190-7896-432e-8d7a-e14ef03bbf86",
+        "50d84ec3-b4a9-48b6-8024-869948182ff7",
+        "030a5a5f-cc0c-4d66-b2f1-e8102b62a7f6",
+        "df055764-d68d-4d61-95c7-2bfd1fae7fe5",
+        "cf19a794-1889-4ef5-a2bd-4c2b441dcdcc"
+      ],
+      "settings": {
+        "bg": "#000000",
+        "color": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "top-center",
+        "menu": "test",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "none",
+        "show_line_separator": false,
+        "color_scheme": "background-1",
+        "menu_color_scheme": "background-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "26482fa3-0d7a-43f2-96dd-88d3b7b39cd3",
+    "15f0ab97-a448-448b-aece-d23047514736",
+    "header"
+  ]
+}

@@ -1,0 +1,105 @@
+<style>
+    .inventory-threshold {
+        position: relative;
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        padding-left: 1.5rem;
+      }
+      .inventory-threshold:before {
+        position: absolute;
+        content: "";
+        left: 0px;
+        width: 10px;
+        height: 10px;
+        background: grey;
+        border-radius: 50%;
+      }
+      .inventory-threshold:after {
+        /* position: absolute;
+        content: "";
+        bottom: -6px;
+        left: -6px;
+        width: 93%;
+        height: 6px;
+        border-radius: 3px;
+        background: grey; */
+      }
+      .inventory-threshold span:first-child {
+        font-weight: 700;
+      }
+      .inventory-threshold.red span:first-child{
+        color: #EE2D00;
+      }
+      .inventory-threshold.orange span:first-child{
+        color: #EBB64A;
+      }
+      .inventory-threshold.green span:first-child{
+        color: #52AF3C;
+      }
+      .inventory-threshold.green span:last-child, .inventory-threshold.orange span:last-child{
+        opacity: 0;
+      }
+      .inventory-threshold.red:before, .inventory-threshold.red:after{
+        background-color: #EE2D00;
+      }
+      .inventory-threshold.orange:before, .inventory-threshold.orange:after{
+        background-color: #EBB64A;
+      }
+      .inventory-threshold.green:before, .inventory-threshold.green:after{
+        background-color: #52AF3C;
+      }
+      .inventory-threshold span:last-child {
+        margin-left: 3rem;
+        color: #858685;
+      }
+      .inventory-threshold span:last-child strong {
+        color: black;
+      }
+  @media(max-width: 767px){
+    .inventory-threshold {
+      flex: 0 0 100%;
+      justify-content: space-between;
+    }
+  }
+</style>
+
+<div
+    class="product__inventory no-js-hidden {% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
+    id="Inventory-{{ section.id }}"
+    role="status"
+>
+{%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
+    {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
+    {%- if product.selected_or_first_available_variant.inventory_quantity <= section.settings.min-threshold -%}
+        <div class="inventory-threshold low-threshold red">
+        {{ section.settings.threshold-text }}
+        </div>
+    {%- elsif product.selected_or_first_available_variant.inventory_quantity > section.settings.min-threshold and product.selected_or_first_available_variant.inventory_quantity <= section.settings.max-threshold -%}
+        <div class="inventory-threshold medium-threshold orange">
+        {{ section.settings.threshold-text }}
+        </div>
+    {% else %}
+        <div class="inventory-threshold high-threshold green">
+        {{ section.settings.threshold-text }}
+
+        </div>
+    {%- endif -%}
+    {%- else -%}
+    {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+        <svg width="15" height="15" aria-hidden="true">
+        <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
+        <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
+        </svg>
+        {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
+    {%- else -%}
+        <svg width="15" height="15" aria-hidden="true">
+        <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(200,200,200, 0.3)"/>
+        <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(200,200,200)"/>
+        </svg>
+        {{- 'products.product.inventory_out_of_stock' | t -}}
+    {%- endif -%}
+    {%- endif -%}
+{%- endif -%}
+</div>

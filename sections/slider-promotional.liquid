@@ -1,0 +1,311 @@
+<!-- start slider-promotional.liquid (SECTION) -->
+<section class="wrapper {{ section.settings.custom_class }}" data-section-type="slider-promotional" id="slider-promotional-{{ section.id }}" data-slider="{{ section.id }}">
+    {% if section.settings.section_title != blank %}
+      <h2 class="section-title">{{ section.settings.section_title | escape }}</h2>
+    {% endif %}
+
+      <div id="promotional-{{ section.id }}" class="grid-products slick-slide sliderPromotional sld-promotional" data-autoplay="{{ section.settings.slider_autoplay }}" data-speed="{{ section.settings.slider_speed }}">
+      {% for block in section.blocks %}
+          <div style="border: 2px solid {{ section.settings.background_slide_promotional }};" class="grid-products-item featured" {{ block.shopify_attributes }}>
+            <a title="{{ block.settings.title }}" id="promo-slider-{{ forloop.index }}" href="{% if block.settings.link_youtube_slide_promotional != blank %}#{% else %}{{block.settings.link_Image_slide_promotional}}{% endif %}" {% if block.settings.link_youtube_slide_promotional != blank %} data-video-id="{{block.settings.link_youtube_slide_promotional}}"  data-channel="youtube" {% endif %} class="{% if block.settings.link_youtube_slide_promotional != blank %}promo-grid-slider-video{% endif %} grid-product-link">
+              {% if block.settings.image_slide_promotional.alt != blank %}
+                  {% assign image_alt = block.settings.image_slide_promotional.alt | strip_html | escape %}
+                {% elsif block.settings.title_slide_promotional != blank %}
+                  {% assign image_alt = block.settings.title_slide_promotional | strip_html | escape %}
+                {% else %}
+                  {% assign image_alt = "Image without description." %}
+                {% endif %}
+              <div class="responsive-image__wrapper image-responsive">
+                {%- assign slider_promotional_id = 'slider_promotional-' | append: forloop.index -%}
+                {% assign div_id = section.id | append: '-' | append: forloop.index %}
+               {%- render 'responsive-image' with div_id: forloop.index, image_id: slider_promotional_id, image: block.settings.image_slide_promotional, custom_class: true, max_width: 250, active_lazy:true, id_prefix:index, size_large: 270, size_mobile: 37, size_desk: 28 -%}
+              </div>
+
+              {%- assign default_label = 'homepage.onboarding.collection_title' | t -%}
+              <h3 class="grid-product-title" style="color:{{ section.settings.text_color_slider_promotional }}; background-color:{{ section.settings.background_slide_promotional }};text-transform: {{ section.settings.text_transform_title_slider }};">{{block.settings.title_slide_promotional}}</h3>
+            </a>
+          </div>
+      {%- else -%}
+        {%- render 'no-blocks' -%}
+      {%- endfor -%}
+    </div>
+</section>
+
+{% style %}
+  #slider-promotional-{{section.id}} .slick-list {
+    width: 100%;
+  }
+  #slider-promotional-{{section.id}} .section-title {
+    text-transform: {{section.settings.headline_text_transform_title_slider}};
+  }
+  #slider-promotional-{{section.id}} .grid-products .grid-products-item.featured{
+    border:2px solid {{section.settings.background_slide_promotional}};
+  }
+  #slider-promotional-{{section.id}} .grid-products.slick-slide .grid-products-item.featured .grid-product-title{
+    background-color: {{section.settings.background_slide_promotional}};
+    color: {{section.settings.text_color_slider_promotional}};
+  }
+  .shopify-section.banner+   #shopify-section-{{section.id}} {
+    position: relative;
+    top: -{{section.settings.top_margin_slide}}px;
+    margin-bottom: -{{section.settings.top_margin_slide}}px;
+    float: left;
+    width: 100%;
+  }
+
+  {% if section.settings.top_margin_slide %}
+     .shopify-section.banner+  #shopify-section-{{section.id}} > .wrapper {
+      display: block;
+      margin: 0 auto;
+      background: #fff;
+    }
+  {% endif %}
+
+  @media only screen and (max-width: 1019px ){
+     .shopify-section.banner + #shopify-section-{{section.id}} {
+      top: -65px;
+      margin-bottom: -65px;
+    }
+  }
+
+  @media only screen and (max-width: 767px ){
+    .shopify-section.banner + #shopify-section-{{section.id}}{
+      top: 0;
+      margin-bottom: 0;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Promotional Slider",
+    "max_blocks": 12,
+    "class": "section-slide-promotional",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Promotional Slider"
+      },
+      {
+        "type": "text",
+        "id": "custom_class",
+        "label": "Custom Class",
+        "info": "Custom class to apply css styles for specific sections"
+      },
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title"
+      },
+      {
+        "type": "color",
+        "id": "background_slide_promotional",
+        "label": "Border Color",
+        "default": "#444"
+      },
+      {
+        "type": "color",
+        "id": "text_color_slider_promotional",
+        "label": "Text Color",
+        "default": "#fff"
+      },
+      {
+        "type": "range",
+        "id": "top_margin_slide",
+        "info": "Only works if section above is the banner",
+        "min": 0,
+        "max": 500,
+        "step": 5,
+        "unit": "px",
+        "label": "Position On/Off Banner",
+        "default": 125
+      },
+      {
+        "type": "select",
+        "id": "headline_text_transform_title_slider",
+        "label": "Headline Text Transform",
+        "options": [
+          {
+           "value": "capitalize",
+           "label": "Capitalize"
+          },
+          {
+            "value": "none",
+            "label": "Same as Input"
+          },
+          {
+            "value": "uppercase",
+            "label": "Uppercase"
+          }
+        ] 
+      },
+      {
+        "type": "select",
+        "id": "text_transform_title_slider",
+        "label": "Slide Title Transform",
+        "options": [
+          {
+            "value": "capitalize",
+            "label": "Capitalize"
+          },
+          {
+            "value": "lowercase",
+            "label": "Lowercase"
+          },
+          {
+            "value": "none",
+            "label": "Same as Input"
+          },
+          {
+            "value": "uppercase",
+            "label": "Uppercase"
+          }
+       ]
+      },
+      {
+        "type": "header",
+        "content": "Slider Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_autoplay",
+        "label": "Slider Autoplay",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "slider_speed",
+        "label": "Slider Speed",
+        "min": 800,
+        "max": 3000,
+        "step": 100,
+        "unit": "s",
+        "default": 800,
+        "info": "Transition time in milliseconds"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "Slide Image",
+        "settings": [
+         {
+            "label": "Slide Title",
+            "id": "title_slide_promotional",
+            "type": "text",
+            "default":"Example"
+          },
+          {
+            "type": "text",
+            "id": "link_Image_slide_promotional",
+            "label": "Slide Link",
+            "default":"#"
+          },
+		  {
+            "type": "text",
+            "id": "link_youtube_slide_promotional",
+            "label": "Youtube video ID"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_slide_promotional",
+            "label": "Image "
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Promotional Slider",
+        "category": "Collection",
+        "blocks": [
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% javascript %}
+window.SectionSliderPromotional = (function(){
+  function SectionSliderPromotional() {
+    this.settings = {
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      prevArrow: '<button type="button" class="slick-prev">←</button>',
+      nextArrow: '<button type="button" class="slick-next">→</button>',
+      arrows: true,
+      responsive: [
+          {
+              breakpoint: 1180,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+              }
+          },
+          {
+              breakpoint: 1019,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              }
+          },
+          {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
+          }
+      ]
+    };
+
+    this._run();
+  }
+
+  SectionSliderPromotional.prototype = {
+    onLoad: function() {
+      this._run();
+    },
+
+    _run: function() {
+      var slider, autoplay, autoplaySpeed, settings = this.settings;
+
+      jQuery('[id^="slider-promotional-"]').each(function(){
+        slider = '#promotional-' + $(this).data('slider');
+        
+        autoplay = jQuery(slider).data('autoplay');
+        autoplaySpeed = jQuery(slider).data('speed');
+
+        if (typeof autoplay !== 'undefined' && autoplay != true && autoplay != false) {
+          autoplay = true;
+        }
+
+        if (typeof autoplaySpeed !== 'undefined' && autoplaySpeed < 800 && autoplaySpeed > 3000) {
+          autoplaySpeed = 800;
+        }
+
+        settings.autoplay = autoplay;
+        settings.autoplaySpeed = autoplaySpeed;
+        
+        jQuery(slider).not('.slick-initialized').slick( settings );
+      });
+    }
+  };
+
+  return new SectionSliderPromotional;
+})();
+{% endjavascript %}

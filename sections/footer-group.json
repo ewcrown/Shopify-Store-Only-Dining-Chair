@@ -1,0 +1,65 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "56184eec-7850-46f9-9c72-43225bce8c7d": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "footer-img": "shopify:\/\/shop_images\/Group_48097399.png",
+            "subtext": "<p>We believe in the quality of our products, which is why, unlike other furniture retailers, we offer exclusive 5 year warranties on all furniture in residential settings and Australian first - regular wear and tear coverage.<\/p>"
+          }
+        },
+        "dcf95c9e-bb4b-4fd6-a052-bf2b2a7d7c73": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Explore",
+            "menu": "main-menu"
+          }
+        },
+        "51ed3be8-f60d-40b3-b24d-6c4fa3cad37f": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Care",
+            "menu": "footer"
+          }
+        },
+        "992fafd9-6045-446f-b82d-eee6ce94647b": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Top Selling Collections",
+            "menu": "top-selling-collections"
+          }
+        }
+      },
+      "block_order": [
+        "56184eec-7850-46f9-9c72-43225bce8c7d",
+        "dcf95c9e-bb4b-4fd6-a052-bf2b2a7d7c73",
+        "51ed3be8-f60d-40b3-b24d-6c4fa3cad37f",
+        "992fafd9-6045-446f-b82d-eee6ce94647b"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "ftr-image-2": "shopify:\/\/shop_images\/desktop_badges_HD_644fa221-86a1-41e5-b387-e75577b776b2.png",
+        "copy": ". All Rights Reserved."
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
