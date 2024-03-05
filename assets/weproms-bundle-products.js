@@ -7,47 +7,35 @@ const appInterval = setInterval(() => {
     ".complementary-products__container"
   );
 
+
   if (complementary_products) {
+    document.querySelector('cart-drawer').remove();
+    document.querySelector('#cart-icon-bubble').addEventListener('click',()=>{ window.location.href = '/cart' })
     document.querySelectorAll(".ai-checkbox-product").forEach((e) => {
       console.log(e, "=======================>");
       e.addEventListener("click", () => {
         if (e.checked) {
-          items.push(e.parentElement.dataset.id);
+          const qty = e.closest('.Complementary-li').querySelector('select[name="q"]')
+          items.push(
+            {
+              id: +e.parentElement.dataset.id,
+              quantity: +qty.value
+            }
+          );
         } else {
-          const index = items.indexOf(e.parentElement.dataset.id);
+          const index = items.findIndex(item => item.id === e.parentElement.dataset.id);
           if (index !== -1) {
             items.splice(index, 1);
           }
         }
-        // console.log(items);
       });
     });
     clearInterval(appInterval);
   }
 });
 
-function updateCart() {
-  fetch(window.location.href + "#CartDrawer")
-    .then((resp) => {
-      return resp.text();
-    })
-    .then((htmlText) => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(htmlText, "text/html");
-
-      const element = doc.getElementById("CartDrawer");
-
-      const old_element = document.getElementById("CartDrawer");
-
-      old_element.innerHTML = element.innerHTML;
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-     });
- }
-
 function add_api(formData) {
-  
+
   fetch(window.Shopify.routes.root + "cart/add.js", {
     method: "POST",
     headers: {
@@ -56,29 +44,28 @@ function add_api(formData) {
     body: JSON.stringify(formData),
   })
     .then((response) => {
-      updateCart();
+      window.location.href = '/cart'
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 }
 
-add_to_cart.addEventListener("click", (e) => {
-  setTimeout(() => {
-    let formData = {
-      items: [],
-    };
+if(add_to_cart){
 
-    if (items.length !== 0) { // Checking if items is not an empty array
-      items.forEach((item, index) => {
-        
-        formData.items.push({
-          id: +item,
-          quantity: 1
+  add_to_cart.addEventListener("click", (e) => {
+    setTimeout(() => {
+      let formData = {
+        items: [],
+      };
+  
+      if (items.length !== 0) { // Checking if items is not an empty array
+        items.forEach((item, index) => {
+          formData.items.push(item);
         });
-      });
-
-      add_api(formData);
-    }
-  }, 500);
-});
+  
+        add_api(formData);
+      }
+    }, 500);
+  });
+}

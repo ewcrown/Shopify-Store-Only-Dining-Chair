@@ -845,7 +845,7 @@
                         {% render 'icon-caret' %}
                         </summary>
                       {%- endif -%}
-                      <slideshow-component class="slider-mobile-gutter">
+                      <slideshow-component class="he-complimentary-slider slider-mobile-gutter">
                         {%- assign number_of_slides = recommendations.products_count
                           | plus: 0.0
                           | divided_by: block.settings.products_per_page
@@ -879,7 +879,7 @@
                                     <div class="check-box-div" data-id="{{ product.selected_or_first_available_variant.id }}">
                                       <input class="form-check-input  ai-checkbox-product" type="checkbox">
                                     </div>
-                                    {% render 'card-product',
+                                    {% render 'complimentary-card',
                                       card_product: product,
                                       media_aspect_ratio: block.settings.image_ratio,
                                       show_secondary_image: false,
@@ -887,7 +887,8 @@
                                       show_quick_add: block.settings.enable_quick_add,
                                       section_id: section.id,
                                       horizontal_class: true,
-                                      horizontal_quick_add: true
+                                      horizontal_quick_add: true,
+                                      quantity_selector: true
                                     %}
                                   </li>
                                 {%- endfor -%}

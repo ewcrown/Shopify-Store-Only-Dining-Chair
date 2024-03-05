@@ -46,6 +46,7 @@
 
     {{ 'slick.css' | asset_url | stylesheet_tag }}
     {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+    {{ 'he-style.css' | asset_url | stylesheet_tag }}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -361,6 +362,7 @@
     {%- endif -%}
 
   <!-- Bundle -->
+       {{ 'he-custom.js' | asset_url | script_tag }}
        {{ 'weproms-bundle-products.js' | asset_url | script_tag }}
     <!-- Stamped - Begin script -->
     <script>
