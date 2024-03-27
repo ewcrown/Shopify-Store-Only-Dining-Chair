@@ -89,7 +89,8 @@
               {%- else -%}
                 {% assign basePrice = product.selected_or_first_available_variant.price %}
 
-                {{ 'products.product.add_to_cart' | t }} |<span id="updated-price">{{ basePrice | money }}</span>→
+                {{ 'products.product.add_to_cart' | t }} |<span id="updated-price" style="display: none;">{{ basePrice | money }}</span>
+                <span id="alltotalprice">{{ basePrice | money }}</span>→
               {%- endif -%}
             </span>
             <div class="loading-overlay__spinner hidden">

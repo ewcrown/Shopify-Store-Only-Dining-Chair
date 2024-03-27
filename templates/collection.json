@@ -205,7 +205,7 @@
         "d0791bc2-31e0-4108-8991-8db88a161027"
       ],
       "settings": {
-        "products_per_page": 12,
+        "products_per_page": 24,
         "columns_desktop": 3,
         "image_ratio": "adapt",
         "image_shape": "default",

@@ -1,14 +1,40 @@
 <style>
-  .inventory-threshold {
-  /* Adjust in main-produt.liquid */
-    gap: 3px;
+        .inventory-threshold {
+        /* Adjust in main-produt.liquid */
+          gap: 3px;
+        }
+        .check-box-div{
+          position: absolute;
+          z-index: 10;
+        }
+        .Complementary-li .card__media{
+          mix-blend-mode: multiply;
+        }
+      .product-container {
+        position: relative;
+    }
+    span.total-price-display {
+      position: absolute;
+      top: auto;
+      left: auto;
+      right: 4px;
+      bottom: 2px;
+      font-size: 11px;
   }
-  .check-box-div{
-    position: absolute;
-    z-index: 10;
+  #he-popup .metafilds{
+    display: flex !important;
+    margin: 10px 0;
   }
-  .Complementary-li .card__media{
-    mix-blend-mode: multiply;
+  #he-popup .metafilds p{
+    margin: 0;
+  }
+  .metafilds{
+    display: none;
+  }
+  p.metaHeading {
+    width: 35%;
+    font-size: 14px;
+    font-weight: 600;
   }
 </style>
 
@@ -213,6 +239,16 @@
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                   {{ form | payment_terms }}
                 {%- endform -%}
+              </div>
+            {%- when 'metafilds' -%}
+              <div class="metafilds">
+                <p class="metaHeading">{{- block.settings.metaHeading -}}</p>
+                <p
+                  class="metaPara"
+                  {{ block.shopify_attributes }}
+                >
+                  {{- block.settings.meta -}}
+                </p>
               </div>
             {%- when 'inventory' -%}
               <p
@@ -816,137 +852,150 @@
                 </p>
               {%- endif -%}
             {%- when 'complementary' -%}
+            {%- if product.metafields.custom.bundle_variants.value != blank -%}
               <product-recommendations
                 class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
                 data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary"
               >
-                {%- if recommendations.performed and recommendations.products_count > 0 -%}
-                  <aside
-                    aria-label="{{ 'accessibility.complementary_products' | t }}"
-                    {{ block.shopify_attributes -}}
-                    {% if block.settings.make_collapsible_row %}
-                      class="product__accordion accordion"
-                    {% endif %}
-                  >
-                    <div class="complementary-products__container">
+                {%- # if recommendations.performed and recommendations.products_count > 0 -%}
+                <aside
+                  aria-label="{{ 'accessibility.complementary_products' | t }}"
+                  {{ block.shopify_attributes -}}
+                  {% if block.settings.make_collapsible_row %}
+                    class="product__accordion accordion"
+                  {% endif %}
+                >
+                  <div class="complementary-products__container">
+                    {%- if block.settings.make_collapsible_row -%}
+                      <details id="Details-{{ block.id }}-{{ section.id }}" open>
+                        <summary>
+                    {%- endif %}
+                    <div class="summary__title">
                       {%- if block.settings.make_collapsible_row -%}
-                        <details id="Details-{{ block.id }}-{{ section.id }}" open>
-                          <summary>
-                      {%- endif %}
-                      <div class="summary__title">
-                        {%- if block.settings.make_collapsible_row -%}
-                          {% render 'icon-accordion', icon: block.settings.icon %}
-                          <h2 class="h4 accordion__title">{{ block.settings.block_heading }}</h2>
-                        {%- else -%}
-                          <h2 class="h3 accordion__title">{{ block.settings.block_heading }}</h2>
-                        {%- endif -%}
-                      </div>
-                      {%- if block.settings.make_collapsible_row -%}
-                        {% render 'icon-caret' %}
-                        </summary>
-                      {%- endif -%}
-                      <slideshow-component class="he-complimentary-slider slider-mobile-gutter">
-                        {%- assign number_of_slides = recommendations.products_count
-                          | plus: 0.0
-                          | divided_by: block.settings.products_per_page
-                          | ceil
-                        -%}
-                        <div
-                          id="Slider-{{ block.id }}"
-                          class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere"
-                          role="list"
-                          {% if number_of_slides > 1 %}
-                            aria-label="{{ 'general.slider.name' | t }}"
-                          {% endif %}
-                        >
-                          {%- for i in (1..number_of_slides) -%}
-                            <div
-                              id="Slide-{{ block.id }}-{{ forloop.index }}"
-                              class="complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide"
-                              tabindex="-1"
-                              role="group"
-                              {% if number_of_slides > 1 %}
-                                aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
-                                aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                              {% endif %}
-                            >
-                              <ul class="list-unstyled" role="list">
-                                {%- for product in recommendations.products
-                                  limit: block.settings.products_per_page
-                                  offset: continue
-                                -%}
-                                  <li class="Complementary-li">
-                                    <div class="check-box-div" data-id="{{ product.selected_or_first_available_variant.id }}">
-                                      <input class="form-check-input  ai-checkbox-product" type="checkbox">
-                                    </div>
-                                    {% render 'complimentary-card',
-                                      card_product: product,
-                                      media_aspect_ratio: block.settings.image_ratio,
-                                      show_secondary_image: false,
-                                      lazy_load: false,
-                                      show_quick_add: block.settings.enable_quick_add,
-                                      section_id: section.id,
-                                      horizontal_class: true,
-                                      horizontal_quick_add: true,
-                                      quantity_selector: true
-                                    %}
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            </div>
-                          {%- endfor -%}
-                        </div>
-                        {%- if number_of_slides > 1 -%}
-                          <div class="slider-buttons no-js-hidden">
-                            <button
-                              type="button"
-                              class="slider-button slider-button--prev"
-                              name="previous"
-                              aria-label="{{ 'general.slider.previous_slide' | t }}"
-                            >
-                              {% render 'icon-caret' %}
-                            </button>
-                            <div class="slider-counter slider-counter--{{ block.settings.pagination_style }}{% if block.settings.pagination_style == 'counter' or block.settings.pagination_style == 'numbers' %} caption{% endif %}">
-                              {%- if block.settings.pagination_style == 'counter' -%}
-                                <span class="slider-counter--current">1</span>
-                                <span aria-hidden="true"> / </span>
-                                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                                <span class="slider-counter--total">{{ number_of_slides }}</span>
-                              {%- else -%}
-                                <div class="slideshow__control-wrapper">
-                                  {%- for i in (1..number_of_slides) -%}
-                                    <button
-                                      class="slider-counter__link slider-counter__link--{{ block.settings.pagination_style }} link"
-                                      aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                                      aria-controls="Slider-{{ block.id }}"
-                                    >
-                                      {%- if block.settings.pagination_style == 'numbers' -%}
-                                        {{ forloop.index -}}
-                                      {%- else -%}
-                                        <span class="dot"></span>
-                                      {%- endif -%}
-                                    </button>
-                                  {%- endfor -%}
-                                </div>
-                              {%- endif -%}
-                            </div>
-                            <button
-                              type="button"
-                              class="slider-button slider-button--next"
-                              name="next"
-                              aria-label="{{ 'general.slider.next_slide' | t }}"
-                            >
-                              {% render 'icon-caret' %}
-                            </button>
-                          </div>
-                        {%- endif -%}
-                      </slideshow-component>
-                      {%- if block.settings.make_collapsible_row -%}
-                        </details>
+                        {% render 'icon-accordion', icon: block.settings.icon %}
+                        <h2 class="h4 accordion__title">{{ block.settings.block_heading }}</h2>
+                      {%- else -%}
+                        <h2 class="h3 accordion__title">{{ block.settings.block_heading }}</h2>
                       {%- endif -%}
                     </div>
-                  </aside>
-                {%- endif -%}
+                    {%- if block.settings.make_collapsible_row -%}
+                      {% render 'icon-caret' %}
+                      </summary>
+                    {%- endif -%}
+                    <slideshow-component class="he-complimentary-slider slider-mobile-gutter">
+                      {%- assign number_of_slides = recommendations.products_count
+                        | plus: 0.0
+                        | divided_by: block.settings.products_per_page
+                        | ceil
+                      -%}
+                      <div
+                        id="Slider-{{ block.id }}"
+                        class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere"
+                        role="list"
+                        {% if number_of_slides > 1 %}
+                          aria-label="{{ 'general.slider.name' | t }}"
+                        {% endif %}
+                      >
+                        {%- # for i in (1..number_of_slides) -%}
+                        <div
+                          id="Slide-{{ block.id }}-{{ forloop.index }}"
+                          class="complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide"
+                          tabindex="-1"
+                          role="group"
+                          {% if number_of_slides > 1 %}
+                            aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+                            aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                          {% endif %}
+                        >
+                          <ul class="list-unstyled" role="list">
+                            {%- for product in product.metafields.custom.bundle_variants.value -%}
+                              <li class="Complementary-li">
+                                <div class="product-container">
+                                  {% assign productPrice = product.price %}
+                                  <div
+                                    class="check-box-div"
+                                    id="bundlePerice"
+                                    data-id="{{ product.featured_image.product_id }}"
+                                    data-price="{{ productPrice | money }}"
+                                    total-price="{{ productPrice | money }}"
+                                  >
+                                    <input
+                                      class="form-check-input  ai-checkbox-product"
+                                      type="checkbox"
+                                      onclick="change_qty_product(event)"
+                                    >
+                                  </div>
+
+                                  {% render 'complimentary-card',
+                                    card_product: product,
+                                    media_aspect_ratio: block.settings.image_ratio,
+                                    show_secondary_image: false,
+                                    lazy_load: false,
+                                    show_quick_add: block.settings.enable_quick_add,
+                                    section_id: section.id,
+                                    horizontal_class: true,
+                                    horizontal_quick_add: true,
+                                    quantity_selector: true
+                                  %}
+                                </div>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                          <div id="subtotal-display">Subtotal: $0.00</div>
+                        </div>
+                        {%- # endfor -%}
+                      </div>
+                      {%- if number_of_slides > 1 -%}
+                        <div class="slider-buttons no-js-hidden">
+                          <button
+                            type="button"
+                            class="slider-button slider-button--prev"
+                            name="previous"
+                            aria-label="{{ 'general.slider.previous_slide' | t }}"
+                          >
+                            {% render 'icon-caret' %}
+                          </button>
+                          <div class="slider-counter slider-counter--{{ block.settings.pagination_style }}{% if block.settings.pagination_style == 'counter' or block.settings.pagination_style == 'numbers' %} caption{% endif %}">
+                            {%- if block.settings.pagination_style == 'counter' -%}
+                              <span class="slider-counter--current">1</span>
+                              <span aria-hidden="true"> / </span>
+                              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                              <span class="slider-counter--total">{{ number_of_slides }}</span>
+                            {%- else -%}
+                              <div class="slideshow__control-wrapper">
+                                {%- for i in (1..number_of_slides) -%}
+                                  <button
+                                    class="slider-counter__link slider-counter__link--{{ block.settings.pagination_style }} link"
+                                    aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                    aria-controls="Slider-{{ block.id }}"
+                                  >
+                                    {%- if block.settings.pagination_style == 'numbers' -%}
+                                      {{ forloop.index -}}
+                                    {%- else -%}
+                                      <span class="dot"></span>
+                                    {%- endif -%}
+                                  </button>
+                                {%- endfor -%}
+                              </div>
+                            {%- endif -%}
+                          </div>
+                          <button
+                            type="button"
+                            class="slider-button slider-button--next"
+                            name="next"
+                            aria-label="{{ 'general.slider.next_slide' | t }}"
+                          >
+                            {% render 'icon-caret' %}
+                          </button>
+                        </div>
+                      {%- endif -%}
+                    </slideshow-component>
+                    {%- if block.settings.make_collapsible_row -%}
+                      </details>
+                    {%- endif -%}
+                  </div>
+                </aside>
+                {%- # endif -%}
                 {{ 'component-card.css' | asset_url | stylesheet_tag }}
                 {{ 'component-complementary-products.css' | asset_url | stylesheet_tag }}
                 {%- if block.settings.enable_quick_add -%}
@@ -954,6 +1003,7 @@
                   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                 {%- endif -%}
               </product-recommendations>
+                    {%- endif -%}
             {%- when 'icon-with-text' -%}
               {% render 'icon-with-text', block: block %}
           {%- endcase -%}
@@ -1011,7 +1061,7 @@
     </script>
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       function isIE() {
@@ -1092,7 +1142,7 @@
     }
   </script>
 </section>
-
+{% comment %} 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Get the quantity input element
@@ -1107,6 +1157,80 @@
     });
   });
 </script>
+
+<script>
+  function calculateTotalPrice() {
+    var productContainers = document.querySelectorAll('.product-container');
+
+    productContainers.forEach(function(container) {
+      container.querySelector('.total-price-display').textContent = '';
+    });
+
+    productContainers.forEach(function(container) {
+      var checkbox = container.querySelector('.check-box-div .form-check-input');
+      var quantity = parseInt(container.querySelector('.quantity-selector').value);
+
+      if (checkbox.checked && !isNaN(quantity) && quantity > 0) {
+        var priceString = container.querySelector('.check-box-div').getAttribute('data-price');
+        var price = parseFloat(priceString.replace(/[^\d.-]/g, ''));
+
+        if (!isNaN(price)) {
+          var total = quantity * price;
+          container.querySelector('.total-price-display').textContent = 'Total Price: ' + total.toFixed(2);
+          container.querySelector('.check-box-div').setAttribute('total-price', total.toFixed(2));
+        }
+      }
+    });
+    calculateSubtotal();
+  }
+</script>
+
+<script>
+  var subtotal = 0;
+  var updatedPrice = parseFloat(document.getElementById("updated-price").textContent.replace(/[^\d.]/g, ''));
+  function calculateSubtotal() {
+    subtotal = 0;
+    var productContainers = document.querySelectorAll('.product-container');
+
+    productContainers.forEach(function(container) {
+      var checkbox = container.querySelector('.check-box-div .form-check-input');
+      var totalPriceDisplay = container.querySelector('.total-price-display');
+
+      if (checkbox.checked && totalPriceDisplay) {
+        var totalPriceString = container.querySelector('.check-box-div').getAttribute('total-price');
+        var totalPrice = parseFloat(totalPriceString.replace(/[^\d.-]/g, ''));
+        if (!isNaN(totalPrice)) {
+          subtotal += totalPrice;
+        }
+      }
+    });
+    document.getElementById('subtotal-display').textContent = 'Subtotal: $' + subtotal.toFixed(2);
+
+    var allTotalPrice = subtotal + updatedPrice;
+    document.getElementById('alltotalprice').textContent = '$' + allTotalPrice.toFixed(2);
+  }
+
+  function handleCheckboxChange(checkbox) {
+      calculateSubtotal();
+    if (!checkbox.checked) {
+      
+    }
+  }
+
+  var targetNode = document.getElementById("updated-price");
+  var config = { childList: true };
+  var observer = new MutationObserver(function(mutationsList, observer) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        var updatedPriceElement = document.getElementById("updated-price");
+        updatedPrice = parseFloat(updatedPriceElement.textContent.replace(/[^\d.]/g, ''));
+        calculateSubtotal();
+      }
+    }
+  });
+  observer.observe(targetNode, config);
+</script> {% endcomment %}
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -1294,6 +1418,22 @@
         {
           "type": "richtext",
           "id": "text",
+          "label": "Add text"
+        }
+      ]
+    },
+    {
+      "type": "metafilds",
+      "name": "Add Popup Metafilds",
+      "settings": [
+        {
+          "type": "text",
+          "id": "metaHeading",
+          "label": "Add Meta Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "meta",
           "label": "Add text"
         }
       ]

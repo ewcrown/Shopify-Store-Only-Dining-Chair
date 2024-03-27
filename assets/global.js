@@ -184,25 +184,23 @@ class QuantityInput extends HTMLElement {
     event.preventDefault();
     const previousValue = this.input.value;
     let submitBtn = document.querySelector(".product-form__submit");
-    let tPrice ;
-    if(event.target.name !== 'plus')
-    {
-      this.input.stepDown()
-      const buttonMinus = this.querySelector(".quantity__button[name='minus']");
-      tPrice = +buttonMinus.nextElementSibling.value * +buttonMinus.nextElementSibling.dataset.price;
-      submitBtn.innerText = `ADD TO CART |$${tPrice.toFixed(2)}→`;
+    let tPrice;
+    if (event.target.name !== 'plus') {
       
+        this.input.stepDown()
+        const buttonMinus = this.querySelector(".quantity__button[name='minus']");
+        tPrice = (+buttonMinus.nextElementSibling.value * +buttonMinus.nextElementSibling.dataset.price);
     }
-    else{
-      this.input.stepUp() 
-      const buttonMinus = this.querySelector(".quantity__button[name='plus']");
-      tPrice = +buttonMinus.previousElementSibling.value * +buttonMinus.previousElementSibling.dataset.price;
-      submitBtn.innerText = `ADD TO CART |$${tPrice.toFixed(2)}→`;
-      
+    else {
+        this.input.stepUp()
+        const buttonMinus = this.querySelector(".quantity__button[name='plus']");
+        tPrice = (+buttonMinus.previousElementSibling.value * +buttonMinus.previousElementSibling.dataset.price);
     }
-    if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
-      
-  }
+    if (previousValue !== this.input.value) {
+        this.input.dispatchEvent(this.changeEvent);
+        document.getElementById("updated-price").innerText = `$${tPrice.toFixed(2)}`;
+    }
+}
 
   validateQtyRules() {
     const value = parseInt(this.input.value);

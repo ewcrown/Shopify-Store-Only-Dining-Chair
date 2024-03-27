@@ -2,37 +2,37 @@ const add_to_cart = document.querySelector(".product-form__buttons button");
 
 let items = [];
 
-const appInterval = setInterval(() => {
-  const complementary_products = document.querySelector(
-    ".complementary-products__container"
-  );
+// const appInterval = setInterval(() => {
+//   const complementary_products = document.querySelector(
+//     ".complementary-products__container"
+//   );
 
 
-  if (complementary_products) {
-    document.querySelector('cart-drawer').remove();
-    document.querySelector('#cart-icon-bubble').addEventListener('click',()=>{ window.location.href = '/cart' })
-    document.querySelectorAll(".ai-checkbox-product").forEach((e) => {
-      console.log(e, "=======================>");
-      e.addEventListener("click", () => {
-        if (e.checked) {
-          const qty = e.closest('.Complementary-li').querySelector('select[name="q"]')
-          items.push(
-            {
-              id: +e.parentElement.dataset.id,
-              quantity: +qty.value
-            }
-          );
-        } else {
-          const index = items.findIndex(item => item.id === e.parentElement.dataset.id);
-          if (index !== -1) {
-            items.splice(index, 1);
-          }
-        }
-      });
-    });
-    clearInterval(appInterval);
-  }
-});
+//   if (complementary_products) {
+//     document.querySelector('cart-drawer').remove();
+//     document.querySelector('#cart-icon-bubble').addEventListener('click',()=>{ window.location.href = '/cart' })
+//     document.querySelectorAll(".ai-checkbox-product").forEach((e) => {
+//       console.log(e, "=======================>");
+//       e.addEventListener("click", () => {
+//         if (e.checked) {
+//           const qty = e.closest('.Complementary-li').querySelector('select[name="q"]')
+//           items.push(
+//             {
+//               id: +e.parentElement.dataset.id,
+//               quantity: +qty.value
+//             }
+//           );
+//         } else {
+//           const index = items.findIndex(item => item.id === e.parentElement.dataset.id);
+//           if (index !== -1) {
+//             items.splice(index, 1);
+//           }
+//         }
+//       });
+//     });
+//     clearInterval(appInterval);
+//   }
+// });
 
 function add_api(formData) {
 
