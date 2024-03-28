@@ -218,7 +218,7 @@ const subtotal = () => {
     }
   })
 
-  subtotal_div.innerText = `Subtotal: $${subtotal.toFixed(2)} | Disc: $${difference.toFixed(2)}`
+  subtotal_div.innerHTML = `Subtotal: <b>$${subtotal.toFixed(2)}</b> ( Saves <s>$${difference.toFixed(2)}</s> )`
 
   if (product_regular_price === product_sale_price) {
     product_price = +product_regular_price * product_qty

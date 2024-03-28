@@ -1,3 +1,9 @@
+#subtotal-display b{
+  color:#EE2D00;
+}
+#subtotal-display s{
+  font-weight: bold;
+}
 .product-price-ai .badge {
   display: none;
 }
