@@ -1,38 +1,24 @@
 const add_to_cart = document.querySelector(".product-form__buttons button");
 
-let items = [];
+function updateCart() {
+  fetch(window.location.href + "#CartDrawer")
+    .then((resp) => {
+      return resp.text();
+    })
+    .then((htmlText) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlText, "text/html");
 
-// const appInterval = setInterval(() => {
-//   const complementary_products = document.querySelector(
-//     ".complementary-products__container"
-//   );
+      const element = doc.getElementById("CartDrawer");
 
+      const old_element = document.getElementById("CartDrawer");
 
-//   if (complementary_products) {
-//     document.querySelector('cart-drawer').remove();
-//     document.querySelector('#cart-icon-bubble').addEventListener('click',()=>{ window.location.href = '/cart' })
-//     document.querySelectorAll(".ai-checkbox-product").forEach((e) => {
-//       console.log(e, "=======================>");
-//       e.addEventListener("click", () => {
-//         if (e.checked) {
-//           const qty = e.closest('.Complementary-li').querySelector('select[name="q"]')
-//           items.push(
-//             {
-//               id: +e.parentElement.dataset.id,
-//               quantity: +qty.value
-//             }
-//           );
-//         } else {
-//           const index = items.findIndex(item => item.id === e.parentElement.dataset.id);
-//           if (index !== -1) {
-//             items.splice(index, 1);
-//           }
-//         }
-//       });
-//     });
-//     clearInterval(appInterval);
-//   }
-// });
+      old_element.innerHTML = element.innerHTML;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
 
 function add_api(formData) {
 
@@ -44,28 +30,37 @@ function add_api(formData) {
     body: JSON.stringify(formData),
   })
     .then((response) => {
-      window.location.href = '/cart'
+      updateCart();
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 }
 
-if(add_to_cart){
+add_to_cart.addEventListener("click", (e) => {
+  setTimeout(() => {
+    let formData = {
+      items: [],
+    };
 
-  add_to_cart.addEventListener("click", (e) => {
-    setTimeout(() => {
-      let formData = {
-        items: [],
-      };
-  
-      if (items.length !== 0) { // Checking if items is not an empty array
-        items.forEach((item, index) => {
-          formData.items.push(item);
-        });
-  
-        add_api(formData);
-      }
-    }, 500);
-  });
-}
+    const checked_products = document.querySelectorAll(
+      `.Complementary-li .ai-checkbox-product:checked`
+    );
+
+    checked_products.forEach((item) => {
+      const parent = item.closest('li')
+      const variant_id = parent.querySelector('.check-box-div').dataset.id
+      const qty = parent.querySelector('.quantity-selector').value
+
+      formData.items.push(
+        {
+          id: +variant_id,
+          quantity: +qty
+        }
+      )
+    })
+
+    add_api(formData);
+
+  }, 500);
+});

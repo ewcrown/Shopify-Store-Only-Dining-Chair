@@ -6,56 +6,25 @@ function removePopup() {
   }
 }
 
-function updatePrice(findCurrentProductId){
-  const li = findCurrentProductId.closest('li')
-  const checkbox = li.querySelector('.check-box-div input')
-  const current_price = li.querySelector('.price__container .price-item--regular').textContent.replace(/[^\d.]/g, '')
-  const sale_price = li.querySelector('.price__container .price-item--sale').textContent.replace(/[^\d.]/g, '')
-  const update_price = li.querySelector('.total-price-display')
-  let qty = li.querySelector('#bundleQuantity').value
-  let total = 0
-
-  if (checkbox.checked) {
-    if (current_price === sale_price) {
-      total = +current_price * qty
-    } else {
-      total = +sale_price * qty
-    }
-
-    // Update Total
-    if (total > 0) {
-      update_price.innerText = `$${total.toFixed(2)}`
-      subtotal()
-      return
-    }
-
-    update_price.innerText = ''
-    subtotal()
-  } else {
-    update_price.innerText = ''
-    qty = 0
-    subtotal()
-  }
-}
-
 function updateQty() {
   document.body.classList.remove("overflow-hidden");
   const findCurrentPopupId = document.querySelector(
     '#he-popup .hidden-block form input[name="product-id"]'
   ).value;
-  
+
   const findCurrentPopupQty = document.querySelector("#product-prw-qty");
   const findCurrentProductId = document.querySelector(
-    `.Complementary-li  .check-box-div[data-id="${findCurrentPopupId}"]`
+    `.Complementary-li  .check-box-div[data-product_id="${findCurrentPopupId}"]`
   );
-  
+
   const findCurrentProductQty = findCurrentProductId
     .closest("li")
     .querySelector('select[name="q"]');
 
   findCurrentProductQty.value = +findCurrentPopupQty.value;
+
   removePopup();
-  updatePrice(findCurrentProductId);
+  select_product(findCurrentProductId, 'change');
   subtotal();
 }
 
@@ -213,9 +182,11 @@ product_qty_button.forEach((item) => {
   })
 })
 
+
 const subtotal = () => {
   let subtotal = 0
   let product_price = 0
+  let difference = 0
 
   const subtotal_div = document.getElementById('subtotal-display')
   const cart_total = document.querySelector(".product-form__buttons #alltotalprice")
@@ -223,13 +194,31 @@ const subtotal = () => {
   const product_sale_price = document.querySelector(".product__info-container .price-item--sale").textContent.replace(/[^\d.]/g, '')
   const product_qty = document.querySelector(".quantity-cart-add .quantity__input").value
 
+  const complimentary_products = document.querySelectorAll('.Complementary-li')
+
   const complimentary_total_prices = document.querySelectorAll('.he-complimentary-slider .complementary-slide .total-price-display')
 
   complimentary_total_prices.forEach((item) => {
     if (item.textContent != '') return subtotal += +item.textContent.replace(/[^\d.]/g, '')
   })
 
-  subtotal_div.innerText = `Subtotal: $${subtotal.toFixed(2)}`
+  complimentary_products.forEach((item) => {
+
+    const regular_price = item.querySelector('.price__container .price__sale .price-item--regular').innerText.trim() !== '' ? item.querySelector('.price__container .price__sale .price-item--regular').textContent.replace(/[^\d.]/g, '') : item.querySelector('.price__container .price__sale .price-item--sale').textContent.replace(/[^\d.]/g, '')
+
+    const sale_price = item.querySelector('.price__container .price__sale .price-item--sale').textContent.replace(/[^\d.]/g, '')
+
+    const checkbox = item.querySelector('.check-box-div input')
+    const qty = item.querySelector('#bundleQuantity').value
+
+    if (checkbox.checked) {
+      if (regular_price && sale_price) {
+        difference += (+regular_price * +qty) - (+sale_price * +qty)
+      }
+    }
+  })
+
+  subtotal_div.innerText = `Subtotal: $${subtotal.toFixed(2)} | Disc: $${difference.toFixed(2)}`
 
   if (product_regular_price === product_sale_price) {
     product_price = +product_regular_price * product_qty
@@ -241,18 +230,22 @@ const subtotal = () => {
   cart_total.innerText = `$${whole_bundle_price.toFixed(2)}`
 }
 
-const select_product = (e) => {
-  const li = e.target.closest('li')
+const select_product = (e, type) => {
+  const li = type === 'select' ? e.target.closest('li') : e.closest('li')
   const checkbox = li.querySelector('.check-box-div input')
-  const current_price = li.querySelector('.price__container .price-item--regular').textContent.replace(/[^\d.]/g, '')
-  const sale_price = li.querySelector('.price__container .price-item--sale').textContent.replace(/[^\d.]/g, '')
+
+  const regular_price = li.querySelector('.price__container .price__sale .price-item--regular').innerText.trim() !== '' ? li.querySelector('.price__container .price__sale .price-item--regular').textContent.replace(/[^\d.]/g, '') : li.querySelector('.price__container .price__sale .price-item--sale').textContent.replace(/[^\d.]/g, '')
+
+  const sale_price = li.querySelector('.price__container .price__sale .price-item--sale').textContent.replace(/[^\d.]/g, '')
+
   const update_price = li.querySelector('.total-price-display')
   let qty = li.querySelector('#bundleQuantity').value
   let total = 0
 
+
   if (checkbox.checked) {
-    if (current_price === sale_price) {
-      total = +current_price * qty
+    if (regular_price === sale_price) {
+      total = +regular_price * qty
     } else {
       total = +sale_price * qty
     }
@@ -273,5 +266,5 @@ const select_product = (e) => {
   }
 }
 const change_qty_product = (e) => {
-  select_product(e)
+  select_product(e, 'select')
 }

@@ -915,12 +915,13 @@
                                   <div
                                     class="check-box-div"
                                     id="bundlePerice"
-                                    data-id="{{ product.featured_image.product_id }}"
+                                    data-id="{{ product.id }}"
+                                    data-product_id="{{ product.featured_image.product_id }}"
                                     data-price="{{ productPrice | money }}"
                                     total-price="{{ productPrice | money }}"
                                   >
                                     <input
-                                      class="form-check-input  ai-checkbox-product"
+                                      class="form-check-input ai-checkbox-product"
                                       type="checkbox"
                                       onclick="change_qty_product(event)"
                                     >
@@ -1142,94 +1143,6 @@
     }
   </script>
 </section>
-{% comment %} 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get the quantity input element
-    var quantityInput = document.getElementById('Quantity-{{ section.id }}');
-
-    // Attach an event listener for the 'input' event
-    quantityInput.addEventListener('input', function() {
-      var quantityValue = this.value;
-      console.log('Quantity changed to: ', quantityValue);
-
-      // You can perform further actions with the quantityValue here
-    });
-  });
-</script>
-
-<script>
-  function calculateTotalPrice() {
-    var productContainers = document.querySelectorAll('.product-container');
-
-    productContainers.forEach(function(container) {
-      container.querySelector('.total-price-display').textContent = '';
-    });
-
-    productContainers.forEach(function(container) {
-      var checkbox = container.querySelector('.check-box-div .form-check-input');
-      var quantity = parseInt(container.querySelector('.quantity-selector').value);
-
-      if (checkbox.checked && !isNaN(quantity) && quantity > 0) {
-        var priceString = container.querySelector('.check-box-div').getAttribute('data-price');
-        var price = parseFloat(priceString.replace(/[^\d.-]/g, ''));
-
-        if (!isNaN(price)) {
-          var total = quantity * price;
-          container.querySelector('.total-price-display').textContent = 'Total Price: ' + total.toFixed(2);
-          container.querySelector('.check-box-div').setAttribute('total-price', total.toFixed(2));
-        }
-      }
-    });
-    calculateSubtotal();
-  }
-</script>
-
-<script>
-  var subtotal = 0;
-  var updatedPrice = parseFloat(document.getElementById("updated-price").textContent.replace(/[^\d.]/g, ''));
-  function calculateSubtotal() {
-    subtotal = 0;
-    var productContainers = document.querySelectorAll('.product-container');
-
-    productContainers.forEach(function(container) {
-      var checkbox = container.querySelector('.check-box-div .form-check-input');
-      var totalPriceDisplay = container.querySelector('.total-price-display');
-
-      if (checkbox.checked && totalPriceDisplay) {
-        var totalPriceString = container.querySelector('.check-box-div').getAttribute('total-price');
-        var totalPrice = parseFloat(totalPriceString.replace(/[^\d.-]/g, ''));
-        if (!isNaN(totalPrice)) {
-          subtotal += totalPrice;
-        }
-      }
-    });
-    document.getElementById('subtotal-display').textContent = 'Subtotal: $' + subtotal.toFixed(2);
-
-    var allTotalPrice = subtotal + updatedPrice;
-    document.getElementById('alltotalprice').textContent = '$' + allTotalPrice.toFixed(2);
-  }
-
-  function handleCheckboxChange(checkbox) {
-      calculateSubtotal();
-    if (!checkbox.checked) {
-      
-    }
-  }
-
-  var targetNode = document.getElementById("updated-price");
-  var config = { childList: true };
-  var observer = new MutationObserver(function(mutationsList, observer) {
-    for (var mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        var updatedPriceElement = document.getElementById("updated-price");
-        updatedPrice = parseFloat(updatedPriceElement.textContent.replace(/[^\d.]/g, ''));
-        calculateSubtotal();
-      }
-    }
-  });
-  observer.observe(targetNode, config);
-</script> {% endcomment %}
 
 {% schema %}
 {
